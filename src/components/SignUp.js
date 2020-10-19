@@ -9,6 +9,7 @@ export default function Signup() {
         password: "",
     });
 
+
     const [errors, setErrors] = useState({
         username: "",
         password: "",
@@ -33,6 +34,7 @@ export default function Signup() {
       }, [values]);
 
 
+
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitting ", values);
@@ -41,6 +43,7 @@ const handleSubmit = (e) => {
             password: "",
         }); 
     };
+
 
     const inputChange = e => {
         e.persist();
@@ -82,10 +85,12 @@ const handleSubmit = (e) => {
                     placeholder="username"
                     values={values.username}
                     onChange={inputChange}
+
                     />
                 </label>
             </div>
             <div>
+
                 <label htmlFor="password">Enter a password
                     <input 
                     type="password"
@@ -98,6 +103,7 @@ const handleSubmit = (e) => {
                 </label>
             </div>
             <button disabled={buttonDisabled} type='submit'>Sign Up</button>
+
         </form>
     )
 }
