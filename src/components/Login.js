@@ -8,19 +8,19 @@ import { Input, Heading, FormDiv, Button, Error } from 'styled-components'
     
 
 const Login = props => {
-    const { errors, touched } = props;
+    const { errors } = props;
 
 
     return (
         <>
           <Heading>Login</Heading>
           <FormDiv>
-            {touched.username && errors.username && (
+            {username && errors.username && (
               <Error>{errors.username}</Error>
             )}
             <Input type="text" name="username" placeholder="username" />
     
-            {touched.password && errors.password && (
+            {password && errors.password && (
               <Error>{errors.password}</Error>
             )}
             <Input type="password" name="password" placeholder="password" />
