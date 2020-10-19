@@ -12,13 +12,16 @@ Version: 0.0.1
 Meta
 
 Created By:
-    • Front End Team
-        ◦ Brian Kubes
-        ◦ Robert Tierie
-        ◦ David Hall
+     
+Front End Team
+    -Brian Kubes
+    -Robert Tierie
+    -David Hall
+    
+Back End Team
+    -Cory Thomas
       
-    • Back End Team
-        ◦ Cory Thomas
+   
 
 Dependencies
     • axios v0.20.0
