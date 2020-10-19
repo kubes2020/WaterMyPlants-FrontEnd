@@ -1,34 +1,30 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Home } from "./components/Home";
+import { Route, Link } from 'react-router-dom';
+import { AddPlants } from "./components/AddPlants";
+import { PrivateRoute } from "./components/PrivateRoute";
+
 import styled from 'styled-components';
 
 import SignUp from './components/SignUp';
-import Login from './components/Login';
-import Plants from './components/Plants';
-
-
-
-
-import logo from './logo.svg';
+// import Login from './components/Login';
+// import Plants from './components/Plants';
 import './App.css';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <Link to="/">Home</Link><br/>
+        <Link to="/signup">Signup</Link><br/>
+        <Link to="/login">Login</Link>
+        </nav>
+      <Route exact path="/" component={Home}></Route>
+      {/* <Route path="/login" component="Login"></Route> */}
+      <Route exact path="/signup" component={SignUp}></Route>
+      <PrivateRoute exact path="/addplants" component={AddPlants}/>
     </div>
   );
 }

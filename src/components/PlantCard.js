@@ -3,7 +3,16 @@ import styled from 'styled-components'
 
 
 
-//CODE HERE
+export const PlantCard = () => {
+
+    return(
+        <>
+        <h2>My Plants in PlantCard.js</h2>
+
+
+        </>
+    )
+}
 
 
 
@@ -12,7 +21,7 @@ import styled from 'styled-components'
 
 
 
-export default PlantCard
+
 
 
 
