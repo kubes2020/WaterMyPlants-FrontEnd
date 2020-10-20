@@ -27,7 +27,6 @@ export default function AddPlants(props) {
         .required("Must include plant watering frequency."),
         image_url: yup
         .string()
-        .required("Must include plant picture."),
     });
     const [buttonDisabled, setButtonDisabled] = useState(true);
     useEffect(() => {
@@ -40,20 +39,23 @@ export default function AddPlants(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Submitting ", values);
-        axiosWithAuth().post(`/plants/user/:userid`, values)
+        const userId = localStorage.getItem('id')
+        console.log("userId", userId)
+        axiosWithAuth().post(`/plants/user/${userId}`, values)
         .then(res => {
         console.log("res from AddPlants", res)
-        // window.localStorage.setItem('token', res.data.payload)
         props.history.push("/plantcard")
         setValues({
             nickname: "",
             species: "",
             h2o_frequency: "",
+            image_url: "",}); 
+    })
+    .catch(err => {
+        console.log("error with AddPlants", err)
+    })    
+    };
 
-            image_url: "",
-    });
-    }
-    )}
         const inputChange = e => {
             e.persist();
             setValues({

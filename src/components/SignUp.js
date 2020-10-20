@@ -89,8 +89,6 @@ const handleSubmit = (e) => {
       };
     return (
       <>
-      <h1>Signup</h1>
-      <p>Choose a username and password</p>
         <form onSubmit={handleSubmit}>
           <div>
             <h1>

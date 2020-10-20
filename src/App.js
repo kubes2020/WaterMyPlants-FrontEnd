@@ -5,7 +5,7 @@ import { Route, Link, useHistory } from 'react-router-dom';
 import AddPlants from "./components/AddPlants";
 import { PrivateRoute } from "./components/PrivateRoute";
 import Login from "./components/Login";
-import { PlantCard } from "./components/PlantCard";
+import PlantCard from "./components/PlantCard";
 import SignUp from './components/SignUp';
 import './App.css';
 
