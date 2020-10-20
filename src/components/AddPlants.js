@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import {axiosWithAuth} from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 
-export default function AddPlants() {
+export default function AddPlants(props) {
     const [values, setValues] = useState({
         nickname: "",
         species: "",
@@ -36,16 +35,25 @@ export default function AddPlants() {
         setButtonDisabled(!valid);
         });
     }, [values]);
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Submitting ", values);
-            setValues({
+        axiosWithAuth().post(`/plants/user/:userid`, values)
+        .then(res => {
+        console.log("res from AddPlants", res)
+        // window.localStorage.setItem('token', res.data.payload)
+        props.history.push("/plantcard")
+        setValues({
             nickname: "",
             species: "",
             h2o_frequency: "",
+
             img_url: "",
     });
         };
+
         const inputChange = e => {
             e.persist();
             setValues({
@@ -131,8 +139,3 @@ export default function AddPlants() {
         </>
     )
 }
-
-
-
-
-
