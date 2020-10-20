@@ -34,7 +34,7 @@ export default function Login(props) {
     console.log("Submitting ", formState);
     axiosWithAuth().post("/auth/login", formState)
     .then(res => {
-        console.log("res from SignUp", res)
+        console.log("res from Login", res)
         window.localStorage.setItem('token', res.data.payload)
         props.setIsLoggedIn(true)
         props.history.push("/plantcard")
@@ -88,10 +88,10 @@ export default function Login(props) {
     </div>
 
     <label htmlFor="name">Username</label>
-    <input type="text" name="username" value={formState.username} onChange={inputChange} placeHolder="Enter your Username" />
+    <input type="text" name="username" value={formState.username} onChange={inputChange} placeholder="Enter your Username" />
 
     <label htmlFor="password">Password</label>
-    <input type="password" name="password" value={formState.password} onChange={inputChange} placeHolder="Enter your Password" />
+    <input type="password" name="password" value={formState.password} onChange={inputChange} placeholder="Enter your Password" />
           
 
 

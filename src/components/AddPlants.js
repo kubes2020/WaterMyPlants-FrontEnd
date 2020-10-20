@@ -1,20 +1,19 @@
-
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import {axiosWithAuth} from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 
-export default function AddPlants() {
+export default function AddPlants(props) {
     const [values, setValues] = useState({
         nickname: "",
         species: "",
-        h2o_frequency: null,
-        img_url:"",
+        h2o_frequency: "",
+        img_url: "",
     });
     const [errors, setErrors] = useState({
         nickname: "",
         species: "",
-        h2o_frequency: null,
-        img_url:"",
+        h2o_frequency: "",
+        img_url: "",
     });
     const formSchema = yup.object().shape({
         nickname: yup
@@ -36,21 +35,33 @@ export default function AddPlants() {
         setButtonDisabled(!valid);
         });
     }, [values]);
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Submitting ", values);
-            setValues({
+        axiosWithAuth().post(`/plants/user/:userid`, values)
+        .then(res => {
+        console.log("res from AddPlants", res)
+        // window.localStorage.setItem('token', res.data.payload)
+        props.history.push("/plantcard")
+        setValues({
             nickname: "",
             species: "",
-            h2o_frequency: null,
-            img_url:"",
-    });
-        };
+            h2o_frequency: "",
+            img_url: "",}); 
+    })
+    .catch(err => {
+        console.log("error with SignUp", err)
+    })    
+    };
+
         const inputChange = e => {
             e.persist();
             setValues({
             ...values,
-            [e.target.name]: e.target.value
+            [e.target.name]:
+            e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
                 // e.target.type === "checkbox" ? e.target.checked : e.target.value
             });
             validateChange(e);
@@ -137,8 +148,3 @@ export default function AddPlants() {
         </>
     )
 }
-
-
-
-
-
