@@ -3,7 +3,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 
 
-export default function Signup(props) {
+export default function SignUp(props) {
     const [values, setValues] = useState({
         username: "",
         password: "",
@@ -42,6 +42,7 @@ const handleSubmit = (e) => {
     .then(res => {
         console.log("res from SignUp", res)
         window.localStorage.setItem('token', res.data.payload)
+        props.setIsLoggedIn(true)
         props.history.push("/addplants")
         setValues({
             username: "",

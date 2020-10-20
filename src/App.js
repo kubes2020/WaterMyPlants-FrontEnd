@@ -5,8 +5,6 @@ import { AddPlants } from "./components/AddPlants";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { Login } from "./components/Login";
 import { PlantCard } from "./components/PlantCard";
-import styled from 'styled-components';
-
 import SignUp from './components/SignUp';
 import './App.css';
 
@@ -15,20 +13,25 @@ import './App.css';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
+  const handleLogOut = () =>{
+    localStorage.clear()
+    setIsLoggedIn(false)
+  }
+
   return (
     <div className="App">
       <nav>
         <Link to="/">Home</Link><br/>
-        
-        <Link to="/plantcard">View My Plants</Link><br/>
+        {isLoggedIn ? <Link to="/plantcard">View My Plants</Link> : null}<br/>
+        {isLoggedIn ? <Link to="/addplants">Add Plants</Link> : null}<br/>
+        {isLoggedIn ? null : <Link to="/signup">Signup</Link>}<br/>
+        {isLoggedIn ? null : <Link to="/login">Login</Link>}<br/>
+        <Link to="/" onClick={ handleLogOut }>Logout</Link>
+      </nav>
 
-        <Link to="/signup">Signup</Link><br/>
-        <Link to="/login">Login</Link><br/>
-        <Link to="/" onClick={()=> localStorage.clear()}>Logout</Link>
-        </nav>
       <Route exact path="/" component={Home}></Route>
-      <PrivateRoute exact path="/login" component={Login}/>
-      <Route exact path="/signup" component={SignUp}></Route>
+      <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/signup" render={(props) => <SignUp {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
       <PrivateRoute exact path="/addplants" component={AddPlants}/>
       <PrivateRoute exact path="/plantcard" component={PlantCard}/>
     </div>
