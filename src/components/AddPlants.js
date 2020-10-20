@@ -7,13 +7,13 @@ export default function AddPlants(props) {
         nickname: "",
         species: "",
         h2o_frequency: "",
-        img_url: "",
+        image_url: "",
     });
     const [errors, setErrors] = useState({
         nickname: "",
         species: "",
         h2o_frequency: "",
-        img_url: "",
+        image_url: "",
     });
     const formSchema = yup.object().shape({
         nickname: yup
@@ -25,7 +25,7 @@ export default function AddPlants(props) {
         h2o_frequency: yup
         .number()
         .required("Must include plant watering frequency."),
-        img_url: yup
+        image_url: yup
         .string()
         .required("Must include plant picture."),
     });
@@ -50,10 +50,10 @@ export default function AddPlants(props) {
             species: "",
             h2o_frequency: "",
 
-            img_url: "",
+            image_url: "",
     });
-        };
-
+    }
+    )}
         const inputChange = e => {
             e.persist();
             setValues({
@@ -86,7 +86,7 @@ export default function AddPlants(props) {
     return (
         <>
         <div>
-        <img src={`${values.img_url}`} alt="">
+        <img src={`${values.image_url}`} alt="">
         </img>  
         </div>
         <form onSubmit={handleSubmit}>
@@ -124,12 +124,12 @@ export default function AddPlants(props) {
                 </label>
             </div>
             <div>
-                <label htmlFor="img_url">Optional
+                <label htmlFor="image_url">Optional
                 <input
                 type="text"
-                name="img_url"
+                name="image_url"
                 placeholder="Your plant's picture"
-                values={values.img_url}
+                values={values.image_url}
                 onChange={inputChange}
                 />
                 </label>

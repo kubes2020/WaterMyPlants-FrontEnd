@@ -35,7 +35,7 @@ export default function Login(props) {
     axiosWithAuth().post("/auth/login", formState)
     .then(res => {
         console.log("res from Login", res)
-        window.localStorage.setItem('token', res.data.payload)
+        window.localStorage.setItem('token', res.data.token)
         props.setIsLoggedIn(true)
         props.history.push("/plantcard")
         setFormState({
