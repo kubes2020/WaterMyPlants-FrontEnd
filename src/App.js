@@ -3,7 +3,7 @@ import { Home } from "./components/Home";
 import { Route, Link } from 'react-router-dom';
 import { AddPlants } from "./components/AddPlants";
 import { PrivateRoute } from "./components/PrivateRoute";
-
+import { Login } from "./components/Login";
 import styled from 'styled-components';
 
 import SignUp from './components/SignUp';
@@ -22,7 +22,7 @@ function App() {
         <Link to="/login">Login</Link>
         </nav>
       <Route exact path="/" component={Home}></Route>
-      {/* <Route path="/login" component="Login"></Route> */}
+      <PrivateRoute exact path="/login" component={Login}/>
       <Route exact path="/signup" component={SignUp}></Route>
       <PrivateRoute exact path="/addplants" component={AddPlants}/>
     </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 
 
-export default function Signup() {
+export default function Signup(props) {
     const [values, setValues] = useState({
         username: "",
         password: "",
@@ -25,23 +25,32 @@ export default function Signup() {
           .required("Must include password."),
       });
 
-      const [buttonDisabled, setButtonDisabled] = useState(true);
+      const [buttonDisabled, setButtonDisabled] = useState(false);
 
-      useEffect(() => {
-        formSchema.isValid(values).then(valid => {
-          setButtonDisabled(!valid);
-        });
-      }, [values]);
+    //   useEffect(() => {
+    //     formSchema.isValid(values).then(valid => {
+    //       setButtonDisabled(!valid);
+    //     });
+    //   }, [values]);
 
 
 
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitting ", values);
+    axiosWithAuth().post("/auth/register", values)
+    .then(res => {
+        console.log("res from SignUp", res)
+        window.localStorage.setItem('token', res.data.payload)
+        props.history.push("/addplants")
         setValues({
             username: "",
             password: "",
         }); 
+    })
+    .catch(err => {
+        console.log("error with SignUp", err)
+    })    
     };
 
 
