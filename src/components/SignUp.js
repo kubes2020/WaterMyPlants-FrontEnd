@@ -43,9 +43,8 @@ const handleSubmit = (e) => {
     axiosWithAuth().post("/auth/register", values)
     .then(res => {
         console.log("res from SignUp", res)
-        window.localStorage.setItem('token', res.data.payload)
         props.setIsLoggedIn(true)
-        props.history.push("/addplants")
+        props.history.push("/login")
         setValues({
             username: "",
             password: "",
@@ -88,6 +87,9 @@ const handleSubmit = (e) => {
           });
       };
     return (
+      <>
+      <h1>Signup</h1>
+      <p>Choose a username and password</p>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="username">Enter your Username
@@ -117,5 +119,6 @@ const handleSubmit = (e) => {
             <button disabled={buttonDisabled} type='submit'>Sign Up</button>
 
         </form>
+        </>
     )
 }
