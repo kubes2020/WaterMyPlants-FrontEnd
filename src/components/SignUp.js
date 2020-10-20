@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
+
 
 
 export default function SignUp(props) {
@@ -60,9 +62,11 @@ const handleSubmit = (e) => {
         setValues({
           ...values,
           [e.target.name]: e.target.value
+
         });
     
         validateChange(e);
+
       };
 
       const validateChange = e => {
@@ -98,6 +102,7 @@ const handleSubmit = (e) => {
                 </label>
             </div>
             <div>
+
                 <label htmlFor="password">Enter a password
                     <input 
                     type="password"
@@ -105,10 +110,12 @@ const handleSubmit = (e) => {
                     placeholder="Password"
                     values={values.password}
                     onChange={inputChange}
+
                     />
                 </label>
             </div>
             <button disabled={buttonDisabled} type='submit'>Sign Up</button>
+
         </form>
     )
 }

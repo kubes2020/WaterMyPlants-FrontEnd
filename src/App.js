@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Home } from "./components/Home";
 import { Route, Link } from 'react-router-dom';
@@ -7,7 +8,6 @@ import { Login } from "./components/Login";
 import { PlantCard } from "./components/PlantCard";
 import SignUp from './components/SignUp';
 import './App.css';
-
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+
       <nav>
         <Link to="/">Home</Link><br/>
         {isLoggedIn ? <Link to="/plantcard">View My Plants</Link> : null}<br/>
@@ -34,6 +35,7 @@ function App() {
       <Route exact path="/signup" render={(props) => <SignUp {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
       <PrivateRoute exact path="/addplants" component={AddPlants}/>
       <PrivateRoute exact path="/plantcard" component={PlantCard}/>
+
     </div>
   );
 }
