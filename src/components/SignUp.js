@@ -25,13 +25,13 @@ export default function Signup(props) {
           .required("Must include password."),
       });
 
-      const [buttonDisabled, setButtonDisabled] = useState(false);
+      const [buttonDisabled, setButtonDisabled] = useState(true);
 
-    //   useEffect(() => {
-    //     formSchema.isValid(values).then(valid => {
-    //       setButtonDisabled(!valid);
-    //     });
-    //   }, [values]);
+      useEffect(() => {
+        formSchema.isValid(values).then(valid => {
+          setButtonDisabled(!valid);
+        });
+      }, [values]);
 
 
 
@@ -97,7 +97,6 @@ const handleSubmit = (e) => {
                 </label>
             </div>
             <div>
-
                 <label htmlFor="password">Enter a password
                     <input 
                     type="password"
@@ -105,12 +104,10 @@ const handleSubmit = (e) => {
                     placeholder="Password"
                     values={values.password}
                     onChange={inputChange}
-
                     />
                 </label>
             </div>
             <button disabled={buttonDisabled} type='submit'>Sign Up</button>
-
         </form>
     )
 }
