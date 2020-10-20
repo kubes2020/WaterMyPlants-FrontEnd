@@ -7,7 +7,7 @@ export default function AddPlants() {
     const [values, setValues] = useState({
         nickname: "",
         species: "",
-        h2o_frequency:0,
+        h2o_frequency:null,
         img_url:"",
     });
     const [errors, setErrors] = useState({
@@ -42,7 +42,7 @@ export default function AddPlants() {
             setValues({
             nickname: "",
             species: "",
-            h2o_frequency: 0,
+            h2o_frequency: "",
             img_url:"",
     });
         };
@@ -50,7 +50,8 @@ export default function AddPlants() {
             e.persist();
             setValues({
             ...values,
-            [e.target.name]: e.target.value
+            [e.target.name]:
+            e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
                 // e.target.type === "checkbox" ? e.target.checked : e.target.value
             });
             validateChange(e);
