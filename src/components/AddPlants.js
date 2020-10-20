@@ -7,14 +7,14 @@ export default function AddPlants() {
     const [values, setValues] = useState({
         nickname: "",
         species: "",
-        h2o_frequency:null,
-        img_url:"",
+        h2o_frequency: "",
+        img_url: "",
     });
     const [errors, setErrors] = useState({
         nickname: "",
         species: "",
-        h2o_frequency: 0,
-        img_url:"",
+        h2o_frequency: "",
+        img_url: "",
     });
     const formSchema = yup.object().shape({
         nickname: yup
@@ -43,7 +43,7 @@ export default function AddPlants() {
             nickname: "",
             species: "",
             h2o_frequency: "",
-            img_url:"",
+            img_url: "",
     });
         };
         const inputChange = e => {

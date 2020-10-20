@@ -28,6 +28,7 @@ function App() {
         {isLoggedIn ? null : <Link to="/signup">Signup</Link>}<br/>
         {isLoggedIn ? null : <Link to="/login">Login</Link>}<br/>
         <Link to="/" onClick={ handleLogOut }>Logout</Link>
+        <AddPlants />
       </nav>
 
       <Route exact path="/" component={Home}></Route>
