@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
+import { Link } from "react-router-dom";
 
 
 
@@ -91,12 +92,20 @@ const handleSubmit = (e) => {
       <h1>Signup</h1>
       <p>Choose a username and password</p>
         <form onSubmit={handleSubmit}>
+          <div>
+            <h1>
+              Sign up here. 
+            </h1>
+            <p>
+            <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
+            </p>
+          </div>
             <div>
-                <label htmlFor="username">Enter your Username
+                <label htmlFor="username">
                     <input 
                     type="text"
                     name="username"
-                    placeholder="username"
+                    placeholder="Username"
                     values={values.username}
                     onChange={inputChange}
 
@@ -105,7 +114,7 @@ const handleSubmit = (e) => {
             </div>
             <div>
 
-                <label htmlFor="password">Enter a password
+                <label htmlFor="password">
                     <input 
                     type="password"
                     name="password"
@@ -116,8 +125,10 @@ const handleSubmit = (e) => {
                     />
                 </label>
             </div>
-            <button disabled={buttonDisabled} type='submit'>Sign Up</button>
-
+            <p>
+            By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.
+            </p>
+            <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
         </form>
         </>
     )
