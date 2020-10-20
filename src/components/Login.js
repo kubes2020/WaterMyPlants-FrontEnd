@@ -36,6 +36,7 @@ export default function Login(props) {
     .then(res => {
         console.log("res from Login", res)
         window.localStorage.setItem('token', res.data.token)
+        window.localStorage.setItem('id', res.data.user.id)
         props.setIsLoggedIn(true)
         props.history.push("/plantcard")
         setFormState({
