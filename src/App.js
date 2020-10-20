@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import { Home } from "./components/Home";
 import { Route, Link } from 'react-router-dom';
-import { AddPlants } from "./components/AddPlants";
+import AddPlants from "./components/AddPlants";
 import { PrivateRoute } from "./components/PrivateRoute";
-import { Login } from "./components/Login";
+import Login from "./components/Login";
 import { PlantCard } from "./components/PlantCard";
 import SignUp from './components/SignUp';
 import './App.css';
