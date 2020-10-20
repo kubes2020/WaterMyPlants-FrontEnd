@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 
 
-export default function Signup() {
+
+export default function SignUp(props) {
     const [values, setValues] = useState({
         username: "",
         password: "",
@@ -38,10 +40,20 @@ export default function Signup() {
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitting ", values);
+    axiosWithAuth().post("/auth/register", values)
+    .then(res => {
+        console.log("res from SignUp", res)
+        window.localStorage.setItem('token', res.data.payload)
+        props.setIsLoggedIn(true)
+        props.history.push("/addplants")
         setValues({
             username: "",
             password: "",
         }); 
+    })
+    .catch(err => {
+        console.log("error with SignUp", err)
+    })    
     };
 
 
@@ -50,11 +62,11 @@ const handleSubmit = (e) => {
         setValues({
           ...values,
           [e.target.name]: e.target.value
-            // e.target.type === "checkbox" ? e.target.checked : e.target.value
+
         });
     
         validateChange(e);
-        // setValues(newFormData);
+
       };
 
       const validateChange = e => {

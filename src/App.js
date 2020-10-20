@@ -1,22 +1,41 @@
-import React from 'react';
-// import { Route } from 'react-router-dom';
-// import styled from 'styled-components';
 
+import React, { useState } from 'react';
+import { Home } from "./components/Home";
+import { Route, Link } from 'react-router-dom';
+import { AddPlants } from "./components/AddPlants";
+import { PrivateRoute } from "./components/PrivateRoute";
+import { Login } from "./components/Login";
+import { PlantCard } from "./components/PlantCard";
 import SignUp from './components/SignUp';
-// import Login from './components/Login';
-// import Plants from './components/Plants';
-
-
-
-
-import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const handleLogOut = () =>{
+    localStorage.clear()
+    setIsLoggedIn(false)
+  }
+
   return (
     <div className="App">
-      <h1>Plants</h1>
-      <SignUp />
+
+      <nav>
+        <Link to="/">Home</Link><br/>
+        {isLoggedIn ? <Link to="/plantcard">View My Plants</Link> : null}<br/>
+        {isLoggedIn ? <Link to="/addplants">Add Plants</Link> : null}<br/>
+        {isLoggedIn ? null : <Link to="/signup">Signup</Link>}<br/>
+        {isLoggedIn ? null : <Link to="/login">Login</Link>}<br/>
+        <Link to="/" onClick={ handleLogOut }>Logout</Link>
+      </nav>
+
+      <Route exact path="/" component={Home}></Route>
+      <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/signup" render={(props) => <SignUp {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
+      <PrivateRoute exact path="/addplants" component={AddPlants}/>
+      <PrivateRoute exact path="/plantcard" component={PlantCard}/>
+
     </div>
   );
 }

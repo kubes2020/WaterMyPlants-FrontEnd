@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { withFormik } from "formik";
-import * as yup from "yup";
+import React from "react";
 
-import { FormDiv, Heading, Input, Button, Error } from "./StyledComponents";
 
-const NewPlant = ({errors, status}) => {
-    const [newPlant, setNewPlant] = useState([]);
+
+export const AddPlants = () =>{
+
+    return(
+        <>
+        
+        <h2>Time To Add Your Plants</h2>
+
+
+        </>
+    )
 }
-
-
-
-
-
-
-
-export default Plants
