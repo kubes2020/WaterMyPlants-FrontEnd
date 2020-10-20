@@ -77,53 +77,46 @@ export default function AddPlants() {
         };
     return (
         <>
-        <p>
-        {values.nickname}
-        </p>
-        <p>
-        {values.species}
-        </p>
-        <p>
-        {values.h2o_frequency}
-        </p>
+        <div>
         <img src={`${values.img_url}`} alt="">
         </img>  
+        </div>
         <form onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="nickname">Enter your plant's nickname: 
+                <label htmlFor="nickname">Plant Nickname: 
                 <input 
                 type="text"
                 name="nickname"
-                placeholder="Your plant's nickname"
+                placeholder="Nickname"
                 values={values.nickname}
                 onChange={inputChange}
                 />
                 </label>
             </div>
             <div>
-                <label htmlFor="species">What is the species of your plant?
+                <label htmlFor="species">Plant species?
                 <input 
                 type="text" 
                 name="species"
-                placeholder="Your plant's species"
+                placeholder="Species"
                 values={values.species}
                 onChange={inputChange}
                 />
                 </label>
             </div>
             <div>
-                <label htmlFor="h2o_frequency">Enter your plant's water frequency:
+                <label htmlFor="h2o_frequency">Plant's water frequency?
                 <input
                 type="number"
                 name="h2o_frequency"
-                placeholder="Your plant's water window"
+                placeholder="Water frequency"
                 values={values.h2o_frequency}
                 onChange={inputChange}
                 />
                 </label>
             </div>
             <div>
-                <label htmlFor="img_url">Post a picture of your plant:
+                <label htmlFor="img_url">Optional
                 <input
                 type="text"
                 name="img_url"
