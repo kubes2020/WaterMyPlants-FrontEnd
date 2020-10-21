@@ -8,11 +8,13 @@ import Login from "./components/Login";
 import PlantCard from "./components/PlantCard";
 import SignUp from './components/SignUp';
 import EditPlant from "./components/EditPlant";
+import {PlantContext} from "./components/contexts/PlantContext";
 import './App.css';
 
 
 function App() {
   const history = useHistory()
+  const [plantId, setPlantId] = useState()
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   const handleLogOut = () =>{
@@ -31,15 +33,15 @@ function App() {
         {isLoggedIn ? null : <Link to="/login">Login</Link>}<br/>
         {isLoggedIn ? <Link to="/" onClick={ handleLogOut }>Logout</Link> : null}  
       </nav>
-
-      <Route exact path="/" component={Home}></Route>
-      {/* <Route exact path="/login" component={Login}></Route> */}
-      <Route exact path="/login" render={(props) => <Login {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
-      <Route exact path="/signup" render={(props) => <SignUp {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
-      <PrivateRoute exact path="/addplants" component={AddPlants}/>
-      <PrivateRoute exact path="/plantcard" component={PlantCard}/>
-      <PrivateRoute exact path="/editplant" component={EditPlant}/>
-      
+      <PlantContext.Provider value={{plantId, setPlantId}}>
+        <Route exact path="/" component={Home}></Route>
+        {/* <Route exact path="/login" component={Login}></Route> */}
+        <Route exact path="/login" render={(props) => <Login {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
+        <Route exact path="/signup" render={(props) => <SignUp {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
+        <PrivateRoute exact path="/addplants" component={AddPlants}/>
+        <PrivateRoute exact path="/plantcard" component={PlantCard}/>
+        <PrivateRoute exact path="/editplant" component={EditPlant}/>
+      </PlantContext.Provider>
     </div>
   );
 }

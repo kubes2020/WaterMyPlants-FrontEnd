@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
-
+import { PlantContext } from "./contexts/PlantContext";
 
 export default function EditPlant(props){
+    const { plantId, setPlantId } = useContext(PlantContext)
 
     //need to get the plant id from "handleEdit" on PlantCard.js
-    const plantId = null
+    // const plantId = null
 
 
     const [values, setValues] = useState({
@@ -105,6 +106,7 @@ export default function EditPlant(props){
 
     return (
         <>
+        <h2>Edit Page</h2>
         <div>
         <img src={`${values.image_url}`} alt="">
         </img>  

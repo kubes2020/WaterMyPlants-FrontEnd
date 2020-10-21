@@ -51,6 +51,25 @@ export default function Login() {
 
   const formSubmit = e => {
     e.preventDefault();
+
+    console.log("Submitting ", formState);
+    axiosWithAuth().post("/auth/login", formState)
+    .then(res => {
+        console.log("res from Login", res)
+        window.localStorage.clear()
+        window.localStorage.setItem('token', res.data.token)
+        window.localStorage.setItem('id', res.data.user.id)
+        props.setIsLoggedIn(true)
+        props.history.push("/plantcard")
+        setFormState({
+            username: "",
+            password: "",
+        }); 
+    })
+    .catch(err => {
+        console.log("error with Login", err)
+    })    
+
     
   };
 

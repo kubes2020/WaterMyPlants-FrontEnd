@@ -78,6 +78,7 @@ const handleSubmit = (e) => {
             <h1 class="h3 mb-3 font-weight-normal">
               Sign up here.
             </h1>
+
           </div>
             <div>
                 <label htmlFor="username">Create a: </label>
@@ -108,7 +109,10 @@ const handleSubmit = (e) => {
             <p>
             <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
             </p>
-        </form></div>
+
+        </form>
+      </div>
+
         </>
     )
 }
