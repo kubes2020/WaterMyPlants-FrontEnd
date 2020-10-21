@@ -35,7 +35,7 @@ export default function Login(props) {
     axiosWithAuth().post("/auth/login", formState)
     .then(res => {
         console.log("res from Login", res)
-        window.localStorage.clear()
+       
         window.localStorage.setItem('token', res.data.token)
         window.localStorage.setItem('id', res.data.user.id)
         props.setIsLoggedIn(true)
