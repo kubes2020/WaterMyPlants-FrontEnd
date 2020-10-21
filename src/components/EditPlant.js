@@ -105,6 +105,7 @@ export default function EditPlant(props){
 
     return (
         <>
+        <h2>Edit Page</h2>
         <div>
         <img src={`${values.image_url}`} alt="">
         </img>  

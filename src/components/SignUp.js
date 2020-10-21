@@ -94,9 +94,7 @@ const handleSubmit = (e) => {
             <h1>
               Sign up here. 
             </h1>
-            <p>
-            <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
-            </p>
+            
           </div>
             <div>
                 <label htmlFor="username">
@@ -127,6 +125,9 @@ const handleSubmit = (e) => {
             By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.
             </p>
             <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
+            <p>
+            <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
+            </p>
         </form>
         </>
     )
