@@ -46,7 +46,7 @@ export default function PlantCard(props) {
             <div className="plant-card">
                 <h3>Nickname: {plant.nickname}</h3>
                 <h3>Species: {plant.species}</h3>
-                <h3>Water Per Week {plant.h2o_frequency} time(s)</h3>
+                <h3>Water Per Week: {plant.h2o_frequency} time(s)</h3>
                 <button onClick={()=> handleEdit(plant)}>Edit</button>
                 {/* <PrivateRoute exact path="/editplant" render={(props) => <EditPlant {...props} plant={plant} />} /> */}
                 
