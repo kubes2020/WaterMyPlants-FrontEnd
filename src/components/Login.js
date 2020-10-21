@@ -1,6 +1,21 @@
+// import React from "react";
+
+// export const Login = () => {
+
+//   return(
+//     <>
+//     <h2>Login Page</h2>
+//     </>
+//   )
+// }
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
+import "../style/signup-login.css";
+  
+ 
+  
+
 import * as yup from "yup";
 
 const formSchema = yup.object().shape({
@@ -10,18 +25,23 @@ const formSchema = yup.object().shape({
     .required("Must include your password."),
 });
 
-export default function Login(props) {
+export default function Login() {
+  
   const [buttonDisabled, setButtonDisabled] = useState(true);
- 
+
+  
   const [formState, setFormState] = useState({
     username: "",
     password: "",  
   });
 
+  
   const [errors, setErrors] = useState({
     username: "",
     password: "",
   });
+
+ 
 
   useEffect(() => {
     formSchema.isValid(formState).then(valid => {
@@ -29,8 +49,9 @@ export default function Login(props) {
     });
   }, [formState]);
 
-  const handleSubmit = e => {
+  const formSubmit = e => {
     e.preventDefault();
+
     console.log("Submitting ", formState);
     axiosWithAuth().post("/auth/login", formState)
     .then(res => {
@@ -48,10 +69,12 @@ export default function Login(props) {
     .catch(err => {
         console.log("error with Login", err)
     })    
+
     
   };
 
   const validateChange = e => {
+    
     yup
       .reach(formSchema, e.target.name)
       .validate(e.target.value)
@@ -82,26 +105,33 @@ export default function Login(props) {
   };
 
   return (
-    
-<form onSubmit={handleSubmit}>
-    <div className="form-header">
-        <h1>Water My Plants Login</h1>
-        <p>Welcome, lets keep your plants happy</p>
+  <div class="container">   
+    <form onSubmit={formSubmit}>
+      <div className="form-header">
+        <h1>Login Here </h1>
+        
+        <h3>Lets keep your plants happy</h3>
+     </div>
+
+    <div>
+      <label htmlFor="name">Username: </label>
+      <input type="text" name="username" value={formState.username} onChange={inputChange} placeHolder="Enter your Username" />
     </div>
+    
+    <br></br>
 
-    <label htmlFor="name">Username</label>
-    <input type="text" name="username" value={formState.username} onChange={inputChange} placeholder="Enter your Username" />
+    <div>
+      <label htmlFor="password">Password: </label>
+      <input type="text" name="password" value={formState.password} onChange={inputChange} placeHolder="Enter your Password" />
+    </div> 
 
-    <label htmlFor="password">Password</label>
-    <input type="password" name="password" value={formState.password} onChange={inputChange} placeholder="Enter your Password" />
-          
-
-
+    <br></br>    
+   
     <button disabled={buttonDisabled}>Login</button>
 
-    <p className="text-link">Not a member yet? <Link to="/signup">Sign-up here</Link></p>
-</form>
-    
+    <p className="text-link">Not a member yet? <Link to="/SignUp">Sign-up here</Link></p>
+    </form>
+  </div> 
   );
 }
 
