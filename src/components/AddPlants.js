@@ -50,11 +50,14 @@ export default function AddPlants(props) {
             species: "",
             h2o_frequency: "",
             image_url: "",}); 
-    })
-    .catch(err => {
-        console.log("error with AddPlants", err)
-    })    
+        })
+        .catch(err => {
+            console.log("error with AddPlants", err)
+        })    
     };
+
+
+    
 
         const inputChange = e => {
             e.persist();
