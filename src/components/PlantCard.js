@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { Link } from "react-router-dom";
 import styled from 'styled-components'
 
 
 
-export default function PlantCard() {
+export default function PlantCard(props) {
     const [fetchedPlants, setFetchedPlants] = useState([])
 
     const fetchPlants = () => {
@@ -20,21 +21,28 @@ export default function PlantCard() {
         })
     }
 
+    const handleEdit = () => {
+        console.log("handleEdit")
+        alert("not yet functional")
+        props.history.push("/editplant")
+
+    }
     
 
     return(
         <>
         <h2>Click Below To See Your Family Of Plants</h2>
-        <button onClick={()=> fetchPlants()}>Click Me!</button>
+            <button onClick={()=> fetchPlants()}>Click Me!</button> 
 
         {fetchedPlants.map(plant => (
             <div className="plant-card">
                 <h3>Nickname: {plant.nickname}</h3>
                 <h3>Species: {plant.species}</h3>
                 <h3>Water Per Week {plant.h2o_frequency} time(s)</h3>
+                <button onClick={ handleEdit }>Edit</button>
                 <div className="plant-card-img">
                     <img src={plant.image_url} alt={plant.nickname}></img>
-                </div>
+                </div><br/>
             </div>  
         ))}
        

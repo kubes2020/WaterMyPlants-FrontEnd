@@ -104,7 +104,7 @@ const handleSubmit = (e) => {
                     type="text"
                     name="username"
                     placeholder="Username"
-                    values={values.username}
+                    value={values.username}
                     onChange={inputChange}
 
                     />
@@ -117,7 +117,7 @@ const handleSubmit = (e) => {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    values={values.password}
+                    value={values.password}
                     onChange={inputChange}
 
                     />

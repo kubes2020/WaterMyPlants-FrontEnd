@@ -7,6 +7,7 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import Login from "./components/Login";
 import PlantCard from "./components/PlantCard";
 import SignUp from './components/SignUp';
+import EditPlant from "./components/EditPlant";
 import './App.css';
 
 
@@ -37,7 +38,8 @@ function App() {
       <Route exact path="/signup" render={(props) => <SignUp {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
       <PrivateRoute exact path="/addplants" component={AddPlants}/>
       <PrivateRoute exact path="/plantcard" component={PlantCard}/>
-
+      <PrivateRoute exact path="/editplant" component={EditPlant}/>
+      
     </div>
   );
 }
