@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import {axiosWithAuth} from "../utils/axiosWithAuth";
+import React, { useState, useEffect } from "react";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 
-export default function AddPlants(props) {
+
+export default function EditPlant(props){
+
+    //need to get the plant id from "handleEdit" on PlantCard.js
+    const plantId = null
+
+
     const [values, setValues] = useState({
         nickname: "",
         species: "",
@@ -15,6 +21,19 @@ export default function AddPlants(props) {
         h2o_frequency: "",
         image_url: "",
     });
+
+    useEffect(() => {
+        axiosWithAuth().get(`/plants/${plantId}`)
+        .then(res => {
+            console.log("res from editPlants", res.data)
+            setValues(res.data)
+        })
+        .catch(err => {
+            console.log("error with editPlants", err)
+        })
+    },[])
+
+ 
     const formSchema = yup.object().shape({
         nickname: yup
         .string()
@@ -38,12 +57,10 @@ export default function AddPlants(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Submitting ", values);
-        const userId = localStorage.getItem('id')
-        console.log("userId", userId)
-        axiosWithAuth().post(`/plants/user/${userId}`, values)
+        console.log("Submitting Put", values);
+        axiosWithAuth().put(`/plants/${plantId}`, values)
         .then(res => {
-        console.log("res from AddPlants", res)
+        console.log("res from editPlant", res)
         props.history.push("/plantcard")
         setValues({
             nickname: "",
@@ -52,12 +69,9 @@ export default function AddPlants(props) {
             image_url: "",}); 
         })
         .catch(err => {
-            console.log("error with AddPlants", err)
+            console.log("error with editPlant", err)
         })    
     };
-
-
-    
 
         const inputChange = e => {
             e.persist();
@@ -88,6 +102,7 @@ export default function AddPlants(props) {
                 });
             });
         };
+
     return (
         <>
         <div>
@@ -101,7 +116,7 @@ export default function AddPlants(props) {
                 type="text"
                 name="nickname"
                 placeholder="Nickname"
-                values={values.nickname}
+                value={values.nickname}
                 onChange={inputChange}
                 />
                 </label>
@@ -112,7 +127,7 @@ export default function AddPlants(props) {
                 type="text" 
                 name="species"
                 placeholder="Species"
-                values={values.species}
+                value={values.species}
                 onChange={inputChange}
                 />
                 </label>
@@ -123,7 +138,7 @@ export default function AddPlants(props) {
                 type="number"
                 name="h2o_frequency"
                 placeholder="Water frequency"
-                values={values.h2o_frequency}
+                value={values.h2o_frequency}
                 onChange={inputChange}
                 />
                 </label>
@@ -134,12 +149,12 @@ export default function AddPlants(props) {
                 type="text"
                 name="image_url"
                 placeholder="Your plant's picture"
-                values={values.image_url}
+                value={values.image_url}
                 onChange={inputChange}
                 />
                 </label>
             </div>
-            <button disabled={buttonDisabled}>Add plant!</button>
+            <button disabled={buttonDisabled}>Submit Update</button>
         </form>
         </>
     )

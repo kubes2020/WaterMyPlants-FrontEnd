@@ -45,7 +45,7 @@ export default function Login(props) {
         }); 
     })
     .catch(err => {
-        console.log("error with SignUp", err)
+        console.log("error with Login", err)
     })    
     
   };
