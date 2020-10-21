@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 import { Link } from "react-router-dom";
+import "../style/signup-login.css";
+
 export default function SignUp(props) {
     const [values, setValues] = useState({
         username: "",
@@ -70,6 +72,7 @@ const handleSubmit = (e) => {
       };
     return (
       <>
+      <div class="container">
         <form onSubmit={handleSubmit}>
           <div>
             <h1>
@@ -77,7 +80,7 @@ const handleSubmit = (e) => {
             </h1>
           </div>
             <div>
-                <label htmlFor="username">
+                <label htmlFor="username">Create a: </label>
                     <input
                     type="text"
                     name="username"
@@ -85,10 +88,10 @@ const handleSubmit = (e) => {
                     value={values.username}
                     onChange={inputChange}
                     />
-                </label>
+                
             </div>
             <div>
-                <label htmlFor="password">
+                <label htmlFor="password">Create a:  </label>
                     <input
                     type="password"
                     name="password"
@@ -96,7 +99,7 @@ const handleSubmit = (e) => {
                     value={values.password}
                     onChange={inputChange}
                     />
-                </label>
+               
             </div>
             <p>
             By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.
@@ -105,7 +108,7 @@ const handleSubmit = (e) => {
             <p>
             <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
             </p>
-        </form>
+        </form></div>
         </>
     )
 }
