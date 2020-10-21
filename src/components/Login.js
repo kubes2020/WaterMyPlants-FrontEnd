@@ -11,7 +11,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import "../style/signup-login.css";
   
  
   
@@ -86,26 +86,33 @@ export default function Login() {
   };
 
   return (
-    
-<form onSubmit={formSubmit}>
-    <div className="form-header">
-        <h1>Water My Plants Login</h1>
-        <p>Welcome, lets keep your plants happy</p>
+  <div class="container">   
+    <form onSubmit={formSubmit}>
+      <div className="form-header">
+        <h1>Login Here </h1>
+        
+        <h3>Lets keep your plants happy</h3>
+     </div>
+
+    <div>
+      <label htmlFor="name">Username: </label>
+      <input type="text" name="username" value={formState.username} onChange={inputChange} placeHolder="Enter your Username" />
     </div>
+    
+    <br></br>
 
-    <label htmlFor="name">Username</label>
-    <input type="text" name="username" value={formState.username} onChange={inputChange} placeHolder="Enter your Username" />
+    <div>
+      <label htmlFor="password">Password: </label>
+      <input type="text" name="password" value={formState.password} onChange={inputChange} placeHolder="Enter your Password" />
+    </div> 
 
-    <label htmlFor="password">Password</label>
-    <input type="text" name="password" value={formState.password} onChange={inputChange} placeHolder="Enter your Password" />
-          
-
-
+    <br></br>    
+   
     <button disabled={buttonDisabled}>Login</button>
 
     <p className="text-link">Not a member yet? <Link to="/SignUp">Sign-up here</Link></p>
-</form>
-    
+    </form>
+  </div> 
   );
 }
 
