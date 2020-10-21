@@ -6,10 +6,6 @@ import { PlantContext } from "./contexts/PlantContext";
 export default function EditPlant(props){
     const { plantId, setPlantId } = useContext(PlantContext)
 
-    //need to get the plant id from "handleEdit" on PlantCard.js
-    // const plantId = null
-
-
     const [values, setValues] = useState({
         nickname: "",
         species: "",
@@ -34,7 +30,6 @@ export default function EditPlant(props){
         })
     },[])
 
- 
     const formSchema = yup.object().shape({
         nickname: yup
         .string()
@@ -48,6 +43,7 @@ export default function EditPlant(props){
         image_url: yup
         .string()
     });
+
     const [buttonDisabled, setButtonDisabled] = useState(true);
     useEffect(() => {
         formSchema.isValid(values).then(valid => {
@@ -74,19 +70,34 @@ export default function EditPlant(props){
         })    
     };
 
+    const handleDelete = () => {
+        console.log("Submitting Delete");
+        axiosWithAuth().delete(`/plants/${plantId}`)
+        .then(res => {
+        console.log("res from handleDelete", res)
+        props.history.push("/plantcard")
+        setValues({
+            nickname: "",
+            species: "",
+            h2o_frequency: "",
+            image_url: "",}); 
+        })
+        .catch(err => {
+            console.log("error with handleDelete", err)
+        }) 
+
+    }
+
         const inputChange = e => {
             e.persist();
             setValues({
             ...values,
             [e.target.name]:
             e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
-                // e.target.type === "checkbox" ? e.target.checked : e.target.value
             });
             validateChange(e);
-            // setValues(newFormData);
         };
         const validateChange = e => {
-            // Reach will allow us to "reach" into the schema and test only one part.
             yup
             .reach(formSchema, e.target.name)
             .validate(e.target.value)
@@ -157,6 +168,7 @@ export default function EditPlant(props){
                 </label>
             </div>
             <button disabled={buttonDisabled}>Submit Update</button>
+            <button onClick={handleDelete}>Delete Plant</button>
         </form>
         </>
     )
