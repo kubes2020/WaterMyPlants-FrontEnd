@@ -1,43 +1,30 @@
 import React, { useState, useEffect } from 'react';
-
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 import { Link } from "react-router-dom";
-
-
-
 export default function SignUp(props) {
     const [values, setValues] = useState({
         username: "",
         password: "",
     });
-
-
     const [errors, setErrors] = useState({
         username: "",
         password: "",
     })
-
-
     const formSchema = yup.object().shape({
         username: yup
         .string()
-        .required(2, "Username is a required field."), 
+        .required(2, "Username is a required field."),
         password: yup
           .string()
           .required("Must include password."),
       });
-
       const [buttonDisabled, setButtonDisabled] = useState(true);
-
       useEffect(() => {
         formSchema.isValid(values).then(valid => {
           setButtonDisabled(!valid);
         });
       }, [values]);
-
-
-
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitting ", values);
@@ -49,26 +36,20 @@ const handleSubmit = (e) => {
         setValues({
             username: "",
             password: "",
-        }); 
+        });
     })
     .catch(err => {
         console.log("error with SignUp", err)
-    })    
+    })
     };
-
-
     const inputChange = e => {
         e.persist();
         setValues({
           ...values,
           [e.target.name]: e.target.value
-
         });
-    
         validateChange(e);
-
       };
-
       const validateChange = e => {
         // Reach will allow us to "reach" into the schema and test only one part.
         yup
@@ -92,34 +73,28 @@ const handleSubmit = (e) => {
         <form onSubmit={handleSubmit}>
           <div>
             <h1>
-              Sign up here. 
+              Sign up here.
             </h1>
-            <p>
-            <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
-            </p>
           </div>
             <div>
                 <label htmlFor="username">
-                    <input 
+                    <input
                     type="text"
                     name="username"
                     placeholder="Username"
                     value={values.username}
                     onChange={inputChange}
-
                     />
                 </label>
             </div>
             <div>
-
                 <label htmlFor="password">
-                    <input 
+                    <input
                     type="password"
                     name="password"
                     placeholder="Password"
                     value={values.password}
                     onChange={inputChange}
-
                     />
                 </label>
             </div>
@@ -127,7 +102,13 @@ const handleSubmit = (e) => {
             By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.
             </p>
             <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
+            <p>
+            <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
+            </p>
         </form>
         </>
     )
 }
+
+
+
