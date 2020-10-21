@@ -75,7 +75,7 @@ const handleSubmit = (e) => {
       <div class="container">
         <form onSubmit={handleSubmit}>
           <div>
-            <h1>
+            <h1 class="h3 mb-3 font-weight-normal">
               Sign up here.
             </h1>
           </div>
