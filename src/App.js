@@ -10,8 +10,26 @@ import SignUp from './components/SignUp';
 import EditPlant from "./components/EditPlant";
 import {PlantContext} from "./components/contexts/PlantContext";
 import Settings from "./components/Settings";
+import styled from "styled-components";
 import './App.css';
 
+
+const MainNav = styled.nav`
+  text-align: right;
+`
+const NavLink = styled(Link)`
+  text-decoration: none;
+  padding: .4% 0;
+  color: #D09B57;
+  background: #3AA829;
+  min-width: 150px;
+  margin: .2%;
+  font-size: 1.2rem;
+  justify-content: center;
+  border-radius: 5px;
+  display: inline-flex;
+  text-shadow: 2px 2px 2px black;
+`
 
 function App() {
   const history = useHistory()
@@ -27,14 +45,14 @@ function App() {
   return (
     <div className="App">
 
-      <nav>
-        <Link to="/">Home</Link><br/>
-        {isLoggedIn ? <Link to="/settings">User Settings</Link> : null}<br/>
-        {isLoggedIn ? <Link to="/plantcard">View My Plants</Link> : null}<br/>
-        {isLoggedIn ? <Link to="/addplants">Add Plants</Link> : null}<br/>
-        {isLoggedIn ? null : <Link to="/login">Login</Link>}<br/>
-        {isLoggedIn ? <Link to="/" onClick={ handleLogOut }>Logout</Link> : null}  
-      </nav>
+      <MainNav>      
+        <NavLink to="/">Home</NavLink>     
+        {isLoggedIn ? <NavLink to="/settings">User Settings</NavLink> : null}
+        {isLoggedIn ? <NavLink to="/plantcard">View My Plants</NavLink> : null}
+        {isLoggedIn ? <NavLink to="/addplants">Add Plants</NavLink> : null}
+        {isLoggedIn ? null : <NavLink to="/login">Login</NavLink>}
+        {isLoggedIn ? <NavLink to="/" onClick={ handleLogOut }>Logout</NavLink> : null}  
+      </MainNav>
       <PlantContext.Provider value={{plantId, setPlantId}}>
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/login" render={(props) => <Login {...props} setIsLoggedIn={setIsLoggedIn}/>}></Route>
