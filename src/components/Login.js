@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from "yup";
+import "../style/signup-login.css";
 
 const formSchema = yup.object().shape({
   username: yup.string().required("Name is a required field."),
@@ -82,26 +83,29 @@ export default function Login(props) {
   };
 
   return (
-    
+  <div class="container"> 
 <form onSubmit={handleSubmit}>
     <div className="form-header">
         <h1>Water My Plants Login</h1>
         <p>Welcome, lets keep your plants happy</p>
     </div>
 
+    
     <label htmlFor="name">Username</label>
     <input type="text" name="username" value={formState.username} onChange={inputChange} placeholder="Enter your Username" />
-
+    
+    <br></br>
+    
     <label htmlFor="password">Password</label>
     <input type="password" name="password" value={formState.password} onChange={inputChange} placeholder="Enter your Password" />
-          
-
+       
+<br></br>
 
     <button disabled={buttonDisabled}>Login</button>
 
     <p className="text-link">Not a member yet? <Link to="/signup">Sign-up here</Link></p>
 </form>
-    
+    </div> 
   );
 }
 

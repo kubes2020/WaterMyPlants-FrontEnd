@@ -1,12 +1,14 @@
 body {
-  background-image: url("../assets/close-up.jpg");
+  background-color: #d1cec9;
+
+  /* background-image: url("../assets/closeUp.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
 }
 
-h1 {
+/* .form-header h1 {
   text-align: center;
   color: blue;
   text-shadow: 1px 2px white;
@@ -18,17 +20,69 @@ label {
 }
 
 .container {
+  background-image: url("../assets/closeUp.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
   margin-left: auto;
   margin-right: auto;
 
-  width: 300px;
+  width: 250px;
   align-content: center;
 
   border-radius: 14px;
-  background-color: #98fb98;
-  padding: 125px;
+
+  padding: 200px;
 }
 
-button {
-  align-self: center;
+@media (max-width: 500px) {
+} */
+
+/* form {
+  border: 3px solid #000000;
+} */
+
+/* input [type="text"] {
+  /* input[type="password"] { */
+/* width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+} */
+
+.container {
+  background-image: url("../assets/closeUp.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 400px;
+  height: 500px;
+  align-content: center;
+
+  border-radius: 14px;
+
+  padding: 200px;
+}
+
+label {
+  padding: 45px 45px 45px 0;
+  display: inline-block;
 }
