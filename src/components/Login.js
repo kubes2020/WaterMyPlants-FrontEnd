@@ -86,22 +86,25 @@ export default function Login(props) {
   <div class="container"> 
 <form onSubmit={handleSubmit}>
     <div className="form-header">
-        <h1>Water My Plants Login</h1>
-        <p>Welcome, lets keep your plants happy</p>
+        <h1>Login</h1>
+        <h2>Welcome, lets water</h2>
     </div>
 
+    <br></br>
     
-    <label htmlFor="name">Username</label>
+    <label htmlFor="name"><b>Username: </b></label>
     <input type="text" name="username" value={formState.username} onChange={inputChange} placeholder="Enter your Username" />
     
     <br></br>
     
-    <label htmlFor="password">Password</label>
+    <label htmlFor="password"><b>Password: </b></label>
     <input type="password" name="password" value={formState.password} onChange={inputChange} placeholder="Enter your Password" />
        
-<br></br>
+    <br></br>
 
-    <button disabled={buttonDisabled}>Login</button>
+    <div className="logBtn">
+      <button disabled={buttonDisabled}>Login</button>
+    </div>
 
     <p className="text-link">Not a member yet? <Link to="/signup">Sign-up here</Link></p>
 </form>

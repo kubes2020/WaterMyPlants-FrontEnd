@@ -94,10 +94,13 @@ const handleSubmit = (e) => {
             <h1>
               Sign up here. 
             </h1>
+
+            <p>Let the road to happy plants begin</p>
             
           </div>
+          <br></br>
             <div>
-                <label htmlFor="username">
+                <label htmlFor="username">Create a Username: </label>
                     <input 
                     type="text"
                     name="username"
@@ -106,11 +109,11 @@ const handleSubmit = (e) => {
                     onChange={inputChange}
 
                     />
-                </label>
+                
             </div>
             <div>
 
-                <label htmlFor="password">
+                <label htmlFor="password">Create a Password:</label>
                     <input 
                     type="password"
                     name="password"
@@ -119,7 +122,7 @@ const handleSubmit = (e) => {
                     onChange={inputChange}
 
                     />
-                </label>
+                
             </div>
             <p>
             By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.
