@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {axiosWithAuth} from "../utils/axiosWithAuth";
 import * as yup from 'yup';
+import "../style/signup-login.css";
 
 export default function AddPlants(props) {
     const [values, setValues] = useState({
@@ -94,10 +95,11 @@ export default function AddPlants(props) {
         <img src={`${values.image_url}`} alt="">
         </img>  
         </div>
+        <div className="ls-forms">
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="nickname">Plant Nickname: 
-                <input 
+                <input class="inputcolor"
                 type="text"
                 name="nickname"
                 placeholder="Nickname"
@@ -106,9 +108,9 @@ export default function AddPlants(props) {
                 />
                 </label>
             </div>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="species">Plant species?
-                <input 
+                <input class="inputcolor"
                 type="text" 
                 name="species"
                 placeholder="Species"
@@ -117,9 +119,9 @@ export default function AddPlants(props) {
                 />
                 </label>
             </div>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="h2o_frequency">Plant's water frequency?
-                <input
+                <input class="inputcolor"
                 type="number"
                 name="h2o_frequency"
                 placeholder="Water frequency"
@@ -128,9 +130,9 @@ export default function AddPlants(props) {
                 />
                 </label>
             </div>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="image_url">Optional
-                <input
+                <input class="inputcolor"
                 type="text"
                 name="image_url"
                 placeholder="Your plant's picture"
@@ -141,6 +143,7 @@ export default function AddPlants(props) {
             </div>
             <button disabled={buttonDisabled}>Add plant!</button>
         </form>
+        </div>
         </>
     )
 }
