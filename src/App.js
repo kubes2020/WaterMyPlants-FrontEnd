@@ -11,7 +11,9 @@ import EditPlant from "./components/EditPlant";
 import {PlantContext} from "./components/contexts/PlantContext";
 import Settings from "./components/Settings";
 import styled from "styled-components";
-import './App.css';
+import "./style/home.css"
+// import './App.css';
+
 
 
 const MainNav = styled.nav`
@@ -20,15 +22,15 @@ const MainNav = styled.nav`
 const NavLink = styled(Link)`
   text-decoration: none;
   padding: .4% 0;
-  color: #D09B57;
-  background: #3AA829;
+  color: #F8E30C;
+  background: #81A99D;
   min-width: 150px;
   margin: .2%;
   font-size: 1.2rem;
   justify-content: center;
   border-radius: 5px;
   display: inline-flex;
-  text-shadow: 2px 2px 2px black;
+  font-family: Raleway;
 `
 
 function App() {
