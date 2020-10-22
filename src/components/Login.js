@@ -88,7 +88,7 @@ export default function Login(props) {
 <form onSubmit={handleSubmit}>
     <div className="form-header">
         <h1>Login</h1>
-        <h2>Welcome, lets water</h2>
+        <h2>Lets water</h2>
     </div>
 
     <br></br>
@@ -110,6 +110,8 @@ export default function Login(props) {
     <div className="logBtn">
       <button disabled={buttonDisabled}>Login</button>
     </div>
+
+<br></br>
 
     <div className="form-already">
       <p className="text-link">Not a member yet? <Link to="/signup">Sign-up here</Link></p>

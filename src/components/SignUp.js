@@ -95,7 +95,7 @@ const handleSubmit = (e) => {
               Sign-up  
             </h1>
 
-            <h2>Make plants happy</h2>
+            <h2>Happy Plants</h2>
             
           </div>
           <br></br>
@@ -129,9 +129,9 @@ const handleSubmit = (e) => {
             <b>By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.</b>
             </p>
             </div>
-
+<br></br>
             <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
-            
+<br></br>            
             <div className="form-already">
               <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
             </div>
