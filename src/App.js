@@ -12,7 +12,7 @@ import {PlantContext} from "./components/contexts/PlantContext";
 import Settings from "./components/Settings";
 import styled from "styled-components";
 import "./style/home.css"
-// import './App.css';
+import './App.css';
 
 
 
