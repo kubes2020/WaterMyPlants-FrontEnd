@@ -17,6 +17,22 @@ body {
   border-radius: 14%;
 }
 
+
+.ls-forms form {
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 2px solid #000000;
+  padding: 2rem;
+
+  background-image: url("../assets/pic01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  border-radius: 14%;
+}
+
 .ls-text input[type="text"] {
   padding: 10px;
   margin: 10px 0;
@@ -35,6 +51,18 @@ body {
   margin-right: auto;
   background-color: #f5f3f0;
 }
+
+.ls-text input[type="number"] {
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f3f0;
+}
+
+
 .ls-text label {
   font-family: sans-serif, cursive;
   display: block;
@@ -48,6 +76,10 @@ body {
 .ls-text input,
 textarea {
   display: block;
+}
+
+.inputcolor {
+  -webkit-text-stroke: 0.5px black;
 }
 
 .form-header h1 {
