@@ -14,19 +14,26 @@ const MainCardContainer = styled.div`
     width: 90%;
     height: 90%;
     text-align: center;
-    margin: 0 auto;
+    margin: 2% auto;
     font-family: Raleway;
-    padding: 5%;
+    padding: .5% 0 2% 0;
+    border-radius: 10px;
+    font-size: 3rem;
+    background: white;
+    line-height: 1px;
 `
 const CardImageDiv = styled.div`
+    margin: 0 auto;
     box-sizing: border-box;
-    width: 100%;
-    height: 50%;
+    width: 90%;
+    height: 60%;
     /* border: 4px solid green; */
 `
 const Image = styled.img`
     width: 100%;
     height: auto;
+    box-shadow: 2px 2px 2px black;
+
 `
 
 
@@ -64,9 +71,9 @@ export default function PlantCard(props) {
         {fetchedPlants.map(plant => (
             <DivContainer>
                 <MainCardContainer className="plant-card">
-                    <h3>Nickname: {plant.nickname}</h3>
-                    <h3>Species: {plant.species}</h3>
-                    <h3>Water Per Week: {plant.h2o_frequency} time(s)</h3>
+                    <h4>Nickname: {plant.nickname}</h4>
+                    <h4>Species: {plant.species}</h4>
+                    <h4>Water Per Week: {plant.h2o_frequency} time(s)</h4>
                     <button onClick={()=> handleEdit(plant)}>Edit</button>
                     
                     <CardImageDiv className="plant-card-img">
