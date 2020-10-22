@@ -34,7 +34,25 @@ const Image = styled.img`
     box-shadow: 2px 2px 2px black;
 
 `
+const DivText = styled.div`
+    font-size: 2rem;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 1%;
+`
+const Button = styled.button`
+    font-size: 1.5rem;
+    color: red;
+    border: none;
+    border-radius: 10px;
+`
+const EditButton = styled.button`
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    background: #81A99D;
+    border: none;
 
+`
 
 
 export default function PlantCard(props) {
@@ -64,8 +82,10 @@ export default function PlantCard(props) {
 
     return(
         <>
-        <h2>Click Below To See Your Family Of Plants</h2>
-            <button onClick={()=> fetchPlants()}>Click Me!</button> 
+        <DivText>Click Below To See Your Family Of Plants </DivText>
+        
+            <Button onClick={()=> fetchPlants()}>Click Me!</Button> 
+       
 
         {fetchedPlants.map(plant => (
             <DivContainer>
@@ -73,7 +93,7 @@ export default function PlantCard(props) {
                     <h4>Nickname: {plant.nickname}</h4>
                     <h4>Species: {plant.species}</h4>
                     <h4>Water Per Week: {plant.h2o_frequency} time(s)</h4>
-                    <button onClick={()=> handleEdit(plant)}>Edit</button>
+                    <EditButton onClick={()=> handleEdit(plant)}>Edit</EditButton>
                     
                     <CardImageDiv className="plant-card-img">
                         <Image src={plant.image_url} alt={plant.nickname}></Image>
