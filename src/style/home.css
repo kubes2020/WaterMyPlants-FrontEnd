@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
+.homeheader {
+    color:black;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 15rem;
+
+  }
+
+.rain {
+    color:white;
+}
+
+.rain:hover{
+    color:lightskyblue;
+}
+
+body {
+    /* background-color:#98fb98;
+    background: "../Assets/makeitrain.jpg";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; */
+    /* background: url("../Assets/makeitrain.jpg") */
+
+
+}
+
+.homeheaderparagraph {
+    text-align: left;
+    padding-left: 12.5rem;
+    font-family: Raleway;
+}
