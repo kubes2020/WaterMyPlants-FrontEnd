@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 import { Link } from "react-router-dom";
-
+import "../style/signup-login.css";
 
 
 export default function SignUp(props) {
@@ -88,19 +88,19 @@ const handleSubmit = (e) => {
           });
       };
     return (
-      <>
+      <div className="ls-form">
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="form-header">
             <h1>
-              Sign up here. 
+              Sign-up  
             </h1>
 
-            <p>Let the road to happy plants begin</p>
+            <h2>Make plants happy</h2>
             
           </div>
           <br></br>
-            <div>
-                <label htmlFor="username">Create a Username: </label>
+            <div className="ls-text">
+                <label htmlFor="username"><b>Create a Username:</b></label>
                     <input 
                     type="text"
                     name="username"
@@ -111,9 +111,9 @@ const handleSubmit = (e) => {
                     />
                 
             </div>
-            <div>
+            <div className="ls-text">
 
-                <label htmlFor="password">Create a Password:</label>
+                <label htmlFor="password"><b>Create a Password:</b></label>
                     <input 
                     type="password"
                     name="password"
@@ -124,14 +124,18 @@ const handleSubmit = (e) => {
                     />
                 
             </div>
+            <div className="form-terms">
             <p>
-            By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.
+            <b>By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.</b>
             </p>
+            </div>
+
             <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
-            <p>
-            <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
-            </p>
+            
+            <div className="form-already">
+              <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
+            </div>
         </form>
-        </>
+        </div>
     )
 }
