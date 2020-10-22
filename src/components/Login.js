@@ -83,7 +83,8 @@ export default function Login(props) {
   };
 
   return (
-  <div class="container"> 
+  
+  <div className="ls-form"> 
 <form onSubmit={handleSubmit}>
     <div className="form-header">
         <h1>Login</h1>
@@ -92,21 +93,27 @@ export default function Login(props) {
 
     <br></br>
     
+   <div className="ls-text">
     <label htmlFor="name"><b>Username: </b></label>
     <input type="text" name="username" value={formState.username} onChange={inputChange} placeholder="Enter your Username" />
-    
+   </div>
+   
     <br></br>
     
+    <div className="ls-text"> 
     <label htmlFor="password"><b>Password: </b></label>
     <input type="password" name="password" value={formState.password} onChange={inputChange} placeholder="Enter your Password" />
-       
+    </div>
+
     <br></br>
 
     <div className="logBtn">
       <button disabled={buttonDisabled}>Login</button>
     </div>
 
-    <p className="text-link">Not a member yet? <Link to="/signup">Sign-up here</Link></p>
+    <div className="form-already">
+      <p className="text-link">Not a member yet? <Link to="/signup">Sign-up here</Link></p>
+    </div>
 </form>
     </div> 
   );
