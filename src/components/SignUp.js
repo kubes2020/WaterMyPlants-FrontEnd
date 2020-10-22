@@ -135,7 +135,7 @@ const handleSubmit = (e) => {
 <br></br> 
 <br></br>           
             <div className="form-already">
-              <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
+              <p className="text-link">Already have an account? <Link to="/Login"><b>Log in</b></Link></p>
             </div>
         </form>
         </div>
