@@ -8,9 +8,9 @@ body {
   border: 2px solid #000000;
   padding: 2rem;
 
-  background-image: url("../assets/closeUp.jpg");
+  background-image: url("../assets/waterPlant.jpg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
 
@@ -36,12 +36,13 @@ body {
   background-color: #f5f3f0;
 }
 .ls-text label {
+  font-family: sans-serif, cursive;
   display: block;
-  color: greenyellow;
+  color: #f8df47;
   font-size: 2rem;
 
-  /* text-shadow: 2px 2px black; */
-  -webkit-text-stroke: 2px black;
+  text-shadow: 2px 2px black;
+  -webkit-text-stroke: 1px #f8df47;
 }
 
 .ls-text input,
@@ -51,15 +52,17 @@ textarea {
 
 .form-header h1 {
   color: #f8df47;
-  font-size: 5rem;
+  font-size: 6rem;
   text-shadow: 4px 4px black;
+  font-family: sans-serif, cursive;
 }
 
 .form-header h2 {
-  color: greenyellow;
+  color: #f8df47;
   font-size: 3rem;
-  /* text-shadow: 3px 3px black; */
-  -webkit-text-stroke: 3px black;
+  text-shadow: 4px 5px black;
+  -webkit-text-stroke: 2px#f8df47;
+  font-family: sans-serif, cursive;
 }
 
 .form-already p {
@@ -70,7 +73,7 @@ textarea {
   font-size: 1.5rem;
 }
 
-.text-link {
+.form-already {
 }
 
 .logBtn button {
