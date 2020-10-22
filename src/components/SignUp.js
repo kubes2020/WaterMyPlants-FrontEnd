@@ -96,7 +96,7 @@ const handleSubmit = (e) => {
             </h1>
 
             <h2>Happy Plants</h2>
-            
+         <br></br>  
           </div>
           <br></br>
             <div className="ls-text">
@@ -122,8 +122,10 @@ const handleSubmit = (e) => {
                     onChange={inputChange}
 
                     />
-                
-            </div>
+              </div>
+
+<br></br>
+
             <div className="form-terms">
             <p>
             <b>By selecting Agree and continue below, I agree to Water My Plants' Terms and Conditions.</b>
@@ -131,7 +133,8 @@ const handleSubmit = (e) => {
             </div>
 <br></br>
             <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
-<br></br>            
+<br></br> 
+<br></br>           
             <div className="form-already">
               <p className="text-link">Already have an account? <Link to="/Login">Log in</Link></p>
             </div>
