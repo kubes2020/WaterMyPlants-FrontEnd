@@ -20,7 +20,6 @@ const MainCardContainer = styled.div`
     border-radius: 10px;
     font-size: 3rem;
     background: white;
-    line-height: 1px;
 `
 const CardImageDiv = styled.div`
     margin: 0 auto;
