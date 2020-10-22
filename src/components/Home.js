@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style/home.css";
@@ -13,7 +12,7 @@ export const Home = () => {
         <div class="top-header">
         <h1 class="homeheader">Make It <span class="rain">Rain.</span></h1>
         </div>
-        <div class="container">
+        <div class="containerhome">
         <img src={logo} alt=""></img>
         <p class="homeheaderparagraph">
             <div class="paratitle">Reminding you to water, one flower at a time

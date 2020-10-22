@@ -31,20 +31,20 @@ vertical-align: baseline;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-weight: bolder ;
     text-align: center;
-    font-size: 12rem;
-    padding-top: 3%;
+    font-size: 20rem;
+    padding-top: 4rem;
   }
 .homeheaderparagraph {
     text-align: right;
     padding-right: 5rem;
     font-family: "Raleway";
-    padding-top:8%;
-    font-size: 1.9rem;
+    padding-top:11rem;
+    font-size: 2.5rem;
     color:black;
 }
 .paratitle {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 5rem;
     padding-bottom: 5%;
     color:green;
 
@@ -63,21 +63,18 @@ vertical-align: baseline;
     color:lightskyblue;
 }
 
-.container{
+.containerhome{
     background-color: 	#f3f1f2;
     background-size: cover;
     display:flex;
-    height:600px
+    height:50rem;
 }
 
-.container img{ 
+.containerhome img{ 
     display:flex;
     padding-right: 5%;
-    padding-bottom: 10%;
-    height: 600px;
-    width: 700px;
+    padding-top: 15rem;
+    height: 35rem;
+    width: auto;
     align-items: left;
-    
-    
-
 }
