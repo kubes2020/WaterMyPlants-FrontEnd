@@ -32,6 +32,12 @@ body {
   border-radius: 14%;
 }
 
+@media (max-width: 350px) {
+  .ls-forms form input {
+    font-size: 0.5rem;
+  }
+}
+
 .ls-formes form {
   max-width: 500px;
   margin: 2rem auto;
