@@ -6,8 +6,8 @@ import {PlantContext} from "./contexts/PlantContext";
 
 //styled components
 const MainCardContainer = styled.div`
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     text-align: center;
     margin: 2% auto;
     font-family: Raleway;
@@ -19,8 +19,8 @@ const MainCardContainer = styled.div`
 const CardImageDiv = styled.div`
     margin: 0 auto;
     box-sizing: border-box;
-    width: 90%;
-    height: 60%;
+    width: 80%;
+    height: 50%;
 `
 const Image = styled.img`
     width: 100%;
