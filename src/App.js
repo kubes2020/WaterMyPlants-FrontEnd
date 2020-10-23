@@ -17,6 +17,9 @@ import './App.css';
 
 const MainNav = styled.nav`
   text-align: right;
+  @media (max-width: 400px){
+    text-align: center;
+  }
 `
 const NavLink = styled(Link)`
   text-decoration: none;
@@ -30,12 +33,14 @@ const NavLink = styled(Link)`
   border-radius: 5px;
   display: inline-flex;
   font-family: Raleway;
-
-  
   &:hover {
     color: white;
     background-color: darkgreen;
     transition: all 0.5s ease-in-out;
+  }
+  @media (max-width: 400px){
+    font-size: 1rem;
+    flex-direction: column;
   }
   
 `

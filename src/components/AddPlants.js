@@ -129,7 +129,7 @@ export default function AddPlants(props) {
         <form onSubmit={handleSubmit}>
             <div className="ls-text">
                 <label htmlFor="nickname">Plant Nickname: 
-                <input class="inputcolor"
+                <input className="inputcolor"
                 type="text"
                 name="nickname"
                 placeholder="Nickname"
@@ -140,7 +140,7 @@ export default function AddPlants(props) {
             </div>
             <div className="ls-text">
                 <label htmlFor="species">Plant species?
-                <input class="inputcolor"
+                <input className="inputcolor"
                 type="text" 
                 name="species"
                 placeholder="Species"
@@ -151,7 +151,7 @@ export default function AddPlants(props) {
             </div>
             <div className="ls-text">
                 <label htmlFor="h2o_frequency">Water frequency per week?
-                <input class="inputcolor"
+                <input className="inputcolor"
                 type="number"
                 name="h2o_frequency"
                 placeholder="Water frequency"
@@ -162,7 +162,7 @@ export default function AddPlants(props) {
             </div>
             <div className="ls-text">
                 <label htmlFor="image_url">Optional
-                <input class="inputcolor"
+                <input className="inputcolor"
                 type="text"
                 name="image_url"
                 placeholder="paste image address"
