@@ -13,7 +13,6 @@ const MainCardContainer = styled.div`
     font-family: Raleway;
     border-radius: 10px;
     font-size: 2.7rem;
-    background: white;
 `
 const CardImageDiv = styled.div`
     margin: 0 auto;
@@ -151,7 +150,7 @@ export default function AddPlants(props) {
                 </label>
             </div>
             <div className="ls-text">
-                <label htmlFor="h2o_frequency">Plant's water frequency?
+                <label htmlFor="h2o_frequency">Water frequency per week?
                 <input class="inputcolor"
                 type="number"
                 name="h2o_frequency"
