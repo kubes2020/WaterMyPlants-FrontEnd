@@ -87,7 +87,7 @@ const handleSubmit = (e) => {
           });
       };
     return (
-      <div className="ls-form">
+      <div className="ls-form1">
         <form onSubmit={handleSubmit}>
           <div className="form-header">
             <h1>
