@@ -15,6 +15,9 @@ const MainCardContainer = styled.div`
     border-radius: 10px;
     font-size: 2.7rem;
     background: white;
+    @media (max-width: 400px){
+    font-size: 1.2rem;
+  }
 `
 const CardImageDiv = styled.div`
     margin: 0 auto;
@@ -46,6 +49,9 @@ const EditButton = styled.button`
     border-radius: 10px;
     background: #81A99D;
     border: none;
+    @media (max-width: 400px){
+    font-size: 1rem;
+  }
 `
 const OoopsButton = styled.button`
     font-size: 1.5rem;
@@ -60,6 +66,9 @@ const OoopsButton = styled.button`
         background: yellow;
         color: green;
     }
+    @media (max-width: 400px){
+    font-size: 1rem;
+  }
 `
 
 

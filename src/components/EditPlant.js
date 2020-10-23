@@ -3,7 +3,6 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 import { PlantContext } from "./contexts/PlantContext";
 import styled from "styled-components";
-import "../style/signup-login.css";
 
 const MainCardContainer = styled.div`
     width: 60%;
@@ -174,7 +173,7 @@ export default function EditPlant(props){
         <form onSubmit={handleSubmit}>
             <div className="ls-text">
                 <label htmlFor="nickname">Plant Nickname: 
-                <input 
+                <input className="inputcolor"
                 type="text"
                 name="nickname"
                 placeholder="Nickname"
@@ -185,7 +184,7 @@ export default function EditPlant(props){
             </div>
             <div className="ls-text">
                 <label htmlFor="species">Plant species?
-                <input 
+                <input className="inputcolor"
                 type="text" 
                 name="species"
                 placeholder="Species"
@@ -196,7 +195,7 @@ export default function EditPlant(props){
             </div>
             <div className="ls-text">
                 <label htmlFor="h2o_frequency">Plant's water frequency?
-                <input
+                <input className="inputcolor"
                 type="number"
                 name="h2o_frequency"
                 placeholder="Water frequency"
@@ -207,7 +206,7 @@ export default function EditPlant(props){
             </div>
             <div className="ls-text">
                 <label htmlFor="image_url">Optional
-                <input
+                <input className="inputcolor"
                 type="text"
                 name="image_url"
                 placeholder="Your plant's picture"
