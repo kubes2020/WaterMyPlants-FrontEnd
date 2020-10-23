@@ -6,12 +6,12 @@ import styled from "styled-components";
 import "../style/signup-login.css";
 
 const MainCardContainer = styled.div`
-    width: 90%;
-    height: 90%;
+    width: 60%;
+    height: 50%;
     text-align: center;
     margin: 2% auto;
     font-family: Raleway;
-    padding: .5% 0 2% 0;
+    padding: 2% 0;
     border-radius: 10px;
     font-size: 3rem;
     background: white;
