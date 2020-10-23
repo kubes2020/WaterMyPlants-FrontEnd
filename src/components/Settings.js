@@ -77,19 +77,24 @@ export default function Settings(props){
     
     return(
         <>
-        <h2>Change Password / Username</h2>
-
+        <div className="ls-formes">
         <form onSubmit={handleSubmit}>
-            <div className="form-header"></div>
+        <div className="form-header">
+        <h2>Change Account Settings</h2>
+        <br></br>
+        </div>
+            <div className="ls-text">
 
-            <label htmlFor="name">Username</label>
+            <label htmlFor="name">New Username</label>
             <input type="text" name="username" value={formState.username} onChange={inputChange} placeholder="Enter your Username" />
 
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">New Password</label>
             <input type="password" name="password" value={formState.password} onChange={inputChange} placeholder="Enter your Password" />
             
             <button disabled={buttonDisabled}>Submit Update</button>
+            </div>
         </form>
+        </div>
         </>
     )
 }
