@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import styled from 'styled-components'
 import {PlantContext} from "./contexts/PlantContext";
 
@@ -46,22 +46,43 @@ const EditButton = styled.button`
     border-radius: 10px;
     background: #81A99D;
     border: none;
-
+`
+const OoopsButton = styled.button`
+    font-size: 1.5rem;
+    font-family: Raleway;
+    color: white;
+    border-radius: 10px;
+    background: #95DC12;
+    border: none;
+    margin-top: 15px;
+    padding: 8px 12px;
+    &:hover {
+        background: yellow;
+        color: green;
+    }
 `
 
 
 export default function PlantCard(props) {
     const { plantId, setPlantId } = useContext(PlantContext)
     const history = useHistory()
+    const [noPlantAvail, setNoPlantAvail] = useState(false)
     const [fetchedPlants, setFetchedPlants] = useState([])
 
     const fetchPlants = () => {
         console.log("fetchPlants activated get")
+        setFetchedPlants([])
         const userId = localStorage.getItem('id')
         axiosWithAuth().get(`/plants/user/${userId}`)
         .then(res => {
             console.log('res from fetchPlants', res.data)
             setFetchedPlants(res.data)
+            if(res.data.length < 1){
+                console.log("empty")
+                setNoPlantAvail(true)
+            } else {
+                console.log("full")
+            }
         })
         .catch(err => {
             console.log("error from fetchPlants", err)
@@ -74,16 +95,14 @@ export default function PlantCard(props) {
         history.push("/editplant")
     }
     
-
     return(
         <>
-        <DivText>Click Below To See Your Family Of Plants </DivText>
-        
-            <Button onClick={()=> fetchPlants()}>Click Me!</Button> 
-       
+        <DivText>Click Below To See Your Family Of Plants </DivText> 
+            <Button onClick={()=> fetchPlants()}>Click Me!</Button> <br/>
+            {noPlantAvail ? <Link to="/addplants"><OoopsButton>Ooops, click here to add a plant</OoopsButton></Link> : null}
 
         {fetchedPlants.map(plant => (
-                <MainCardContainer className="plant-card">
+                <MainCardContainer className="plant-card" key={plant.id}>
                     <h4>Nickname: {plant.nickname}</h4>
                     <h4>Species: {plant.species}</h4>
                     <h4>Water Per Week: {plant.h2o_frequency} time(s)</h4> 
