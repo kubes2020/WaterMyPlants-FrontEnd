@@ -4,13 +4,8 @@ import { useHistory } from "react-router-dom";
 import styled from 'styled-components'
 import {PlantContext} from "./contexts/PlantContext";
 
-const DivContainer = styled.div`
-    
-`
 
 const MainCardContainer = styled.div`
-    /* box-sizing: border-box; */
-    /* border: 3px solid red; */
     width: 90%;
     height: 90%;
     text-align: center;
@@ -18,7 +13,7 @@ const MainCardContainer = styled.div`
     font-family: Raleway;
     padding: .5% 0 2% 0;
     border-radius: 10px;
-    font-size: 3rem;
+    font-size: 2.7rem;
     background: white;
 `
 const CardImageDiv = styled.div`
@@ -26,7 +21,6 @@ const CardImageDiv = styled.div`
     box-sizing: border-box;
     width: 90%;
     height: 60%;
-    /* border: 4px solid green; */
 `
 const Image = styled.img`
     width: 100%;
@@ -41,7 +35,7 @@ const DivText = styled.div`
 `
 const Button = styled.button`
     font-size: 1.5rem;
-    color: red;
+    color: #BE1F1F;
     border: none;
     border-radius: 10px;
 `
@@ -88,18 +82,15 @@ export default function PlantCard(props) {
        
 
         {fetchedPlants.map(plant => (
-            <DivContainer>
                 <MainCardContainer className="plant-card">
                     <h4>Nickname: {plant.nickname}</h4>
                     <h4>Species: {plant.species}</h4>
-                    <h4>Water Per Week: {plant.h2o_frequency} time(s)</h4>
-                    <EditButton onClick={()=> handleEdit(plant)}>Edit</EditButton>
-                    
+                    <h4>Water Per Week: {plant.h2o_frequency} time(s)</h4> 
                     <CardImageDiv className="plant-card-img">
                         <Image src={plant.image_url} alt={plant.nickname}></Image>
-                    </CardImageDiv><br/>
-                </MainCardContainer> 
-            </DivContainer> 
+                    </CardImageDiv>
+                    <EditButton onClick={()=> handleEdit(plant)}>Edit</EditButton>
+                </MainCardContainer>  
         ))}
         </>
     )
