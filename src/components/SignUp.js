@@ -131,8 +131,9 @@ const handleSubmit = (e) => {
             </p>
             </div>
 <br></br>
-            <button disabled={buttonDisabled} type='submit'>Agree and continue</button>
-<br></br> 
+            <div className="logBtn">
+              <button disabled={buttonDisabled} type='submit'>Agree and Continue</button>
+<br></br>   </div>
 <br></br>           
             <div className="form-already">
               <p className="text-link">Already have an account? <Link to="/Login"><b>Log in</b></Link></p>
