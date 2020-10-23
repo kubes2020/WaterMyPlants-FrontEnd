@@ -2,6 +2,54 @@ import React, { useState, useEffect, useContext } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 import { PlantContext } from "./contexts/PlantContext";
+import styled from "styled-components";
+import "../style/signup-login.css";
+
+const MainCardContainer = styled.div`
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    margin: 2% auto;
+    font-family: Raleway;
+    padding: .5% 0 2% 0;
+    border-radius: 10px;
+    font-size: 3rem;
+    background: white;
+`
+const CardImageDiv = styled.div`
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 90%;
+    height: 60%;
+`
+const Image = styled.img`
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 2px black;
+
+`
+const DivText = styled.div`
+    font-size: 2rem;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 1%;
+`
+const Button = styled.button`
+    font-size: 1.5rem;
+    color: #BE1F1F ;
+    border: none;
+    border-radius: 10px;
+    background: lightgrey;
+    margin-left: 5px;
+`
+const SubmitButton = styled.button`
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    background: #81A99D;
+    border: none;
+
+`
+
 
 export default function EditPlant(props){
     const { plantId, setPlantId } = useContext(PlantContext)
@@ -117,13 +165,14 @@ export default function EditPlant(props){
 
     return (
         <>
-        <h2>Edit Page</h2>
-        <div>
-        <img src={`${values.image_url}`} alt="">
-        </img>  
-        </div>
+        <MainCardContainer>
+        <CardImageDiv>
+        <Image src={`${values.image_url}`} alt="">
+        </Image>  
+        </CardImageDiv>
+        <div className="ls-forms">
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="nickname">Plant Nickname: 
                 <input 
                 type="text"
@@ -134,7 +183,7 @@ export default function EditPlant(props){
                 />
                 </label>
             </div>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="species">Plant species?
                 <input 
                 type="text" 
@@ -145,7 +194,7 @@ export default function EditPlant(props){
                 />
                 </label>
             </div>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="h2o_frequency">Plant's water frequency?
                 <input
                 type="number"
@@ -156,7 +205,7 @@ export default function EditPlant(props){
                 />
                 </label>
             </div>
-            <div>
+            <div className="ls-text">
                 <label htmlFor="image_url">Optional
                 <input
                 type="text"
@@ -167,9 +216,11 @@ export default function EditPlant(props){
                 />
                 </label>
             </div>
-            <button disabled={buttonDisabled}>Submit Update</button>
-            <button onClick={handleDelete}>Delete Plant</button>
+            <SubmitButton disabled={buttonDisabled}>Submit Update</SubmitButton>
+            <Button onClick={handleDelete}>Delete Plant</Button>
         </form>
+        </div>
+        </MainCardContainer>
         </>
     )
 }
