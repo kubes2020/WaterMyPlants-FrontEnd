@@ -2,6 +2,44 @@ import React, { useState, useEffect } from 'react';
 import {axiosWithAuth} from "../utils/axiosWithAuth";
 import * as yup from 'yup';
 import "../style/signup-login.css";
+import styled from "styled-components";
+
+//styled components
+const MainCardContainer = styled.div`
+    width: 35rem;
+    height: 35rem;
+    text-align: center;
+    margin: 2% auto;
+    font-family: Raleway;
+    border-radius: 10px;
+    font-size: 2.7rem;
+    background: white;
+`
+const CardImageDiv = styled.div`
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+`
+const Image = styled.img`
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 2px black;
+`
+const AddButton = styled.button`
+    font-size: 1.5rem;
+    font-family: Raleway;
+    color: white;
+    border-radius: 10px;
+    background: #95DC12;
+    border: none;
+    margin-top: 15px;
+    padding: 8px 12px;
+    &:hover {
+        background: yellow;
+        color: green;
+    }
+`
 
 export default function AddPlants(props) {
     const [values, setValues] = useState({
@@ -66,13 +104,10 @@ export default function AddPlants(props) {
             ...values,
             [e.target.name]:
             e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
-                // e.target.type === "checkbox" ? e.target.checked : e.target.value
             });
             validateChange(e);
-            // setValues(newFormData);
         };
         const validateChange = e => {
-            // Reach will allow us to "reach" into the schema and test only one part.
             yup
             .reach(formSchema, e.target.name)
             .validate(e.target.value)
@@ -91,10 +126,6 @@ export default function AddPlants(props) {
         };
     return (
         <>
-        <div>
-        <img src={`${values.image_url}`} alt="">
-        </img>  
-        </div>
         <div className="ls-forms">
         <form onSubmit={handleSubmit}>
             <div className="ls-text">
@@ -135,15 +166,21 @@ export default function AddPlants(props) {
                 <input class="inputcolor"
                 type="text"
                 name="image_url"
-                placeholder="Your plant's picture"
+                placeholder="paste image address"
                 values={values.image_url}
                 onChange={inputChange}
                 />
                 </label>
             </div>
-            <button disabled={buttonDisabled}>Add plant!</button>
+            <AddButton disabled={buttonDisabled}>Add plant!</AddButton>
         </form>
         </div>
+        <MainCardContainer>
+        <CardImageDiv>
+        <Image src={`${values.image_url}`} alt="">
+        </Image>
+        </CardImageDiv>  
+        </MainCardContainer>
         </>
     )
 }

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import styled from 'styled-components'
 import {PlantContext} from "./contexts/PlantContext";
 
-
+//styled components
 const MainCardContainer = styled.div`
     width: 90%;
     height: 90%;
@@ -31,13 +31,14 @@ const Image = styled.img`
 const DivText = styled.div`
     font-size: 2rem;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    padding: 1%;
+    padding: 2% 1%;
 `
 const Button = styled.button`
     font-size: 1.5rem;
     color: #BE1F1F;
     border: none;
     border-radius: 10px;
+    margin: 30px 0;
 `
 const EditButton = styled.button`
     font-size: 1.5rem;
@@ -96,35 +97,6 @@ export default function PlantCard(props) {
     )
 }
 
-
-
-// import React from 'react'
-// import styled from 'styled-components'
-// const Card = styled.div
-// export default function PlantCard(props) {
-//     return (
-//       <Card>
-//         <PlantName>{props.name}</PlantName>
-//         <FlexContainer>
-//           <Info>
-//             <SpeciesName>{props.species}</SpeciesName>
-//             <Species>Species</Species>
-//           </Info>
-//           <Info>
-//             <ScheduleTiming>{props.schedule}</ScheduleTiming>
-//             <Schedule>Watering schedule</Schedule>
-//           </Info>
-//           <Info>
-//             <Button
-//               value={props.value}
-//               onClick={props.handleDelete}
-//               className="da-trash"
-//             ></Button>
-//           </Info>
-//         </FlexContainer>
-//       </Card>
-//     );
-//   }
 
 
 
