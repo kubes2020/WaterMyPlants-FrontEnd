@@ -30,6 +30,12 @@ const NavLink = styled(Link)`
   border-radius: 5px;
   display: inline-flex;
   font-family: Raleway;
+
+  &:hover {
+    color: white;
+    background-color: darkgreen;
+    transition: all 0.5s ease-in-out;
+  }
 `
 
 function App() {
