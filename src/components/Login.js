@@ -114,7 +114,7 @@ export default function Login(props) {
 <br></br>
 
     <div className="form-already">
-      <p className="text-link">Not a member yet? <Link to="/signup"><b>Sign-up here</b></Link></p>
+      <p className="text-link">Not a member yet? <Link to="/signup"><b>Sign-Up</b></Link></p>
     </div>
 </form>
     </div> 
