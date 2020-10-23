@@ -77,7 +77,7 @@ body {
 }
 
 .ls-text label {
-  font-family: Railway;
+  font-family: Raleway;
   display: block;
   color: #f8df47;
   font-size: 1.5rem;
@@ -99,7 +99,7 @@ textarea {
   color: #f8df47;
   font-size: 6rem;
   text-shadow: 4px 4px black;
-  font-family: Rilway;
+  font-family: Raleway;
 }
 
 .form-header h2 {
