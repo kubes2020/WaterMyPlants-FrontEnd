@@ -40,11 +40,11 @@ export default function Login(props) {
         window.localStorage.setItem('token', res.data.token)
         window.localStorage.setItem('id', res.data.user.id)
         props.setIsLoggedIn(true)
-        props.history.push("/plantcard")
         setFormState({
-            username: "",
-            password: "",
+          username: "",
+          password: "",
         }); 
+        props.history.push("/plantcard")
     })
     .catch(err => {
         console.log("error with Login", err)
