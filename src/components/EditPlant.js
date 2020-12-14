@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { PlantContext } from "./contexts/PlantContext";
 import styled from "styled-components";
 
+//styled components
 const MainCardContainer = styled.div`
     width: 60%;
     height: 50%;
@@ -46,7 +47,6 @@ const SubmitButton = styled.button`
     border-radius: 10px;
     background: #81A99D;
     border: none;
-
 `
 
 
@@ -67,14 +67,20 @@ export default function EditPlant(props){
     });
 
     useEffect(() => {
+        let mounted = true
         axiosWithAuth().get(`/plants/${plantId}`)
         .then(res => {
             console.log("res from editPlants", res.data)
-            setValues(res.data)
+            if (mounted) {
+                setValues(res.data)
+            }
         })
-        .catch(err => {
-            console.log("error with editPlants", err)
-        })
+        return function cleanup() {
+            mounted = false
+        }
+        // .catch(err => {
+        //     console.log("error with editPlants", err)
+        // })
     },[])
 
     const formSchema = yup.object().shape({
