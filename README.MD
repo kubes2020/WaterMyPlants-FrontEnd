@@ -1,12 +1,12 @@
+Full Site: https://watermyplantsnow.vercel.app/
+
 Water My Plants App
 
     Water My Plants reminds users of a watering schedule to ensure all their plants are healthy and happy.
 
-Knowing when your plants need to be watered is a tough task for anyone to handle. With the Water My Plants App, you will not only be able to keep a picture of your plant with you at all times but also know how often they should be watered. 
+Knowing when your plants need to be watered is a tough task for anyone to handle. With the Water My Plants App, you will not only be able to keep a picture of your plant with you at all times but also know how often they should be watered.
 
 This is an app designed during a Lambda School build week.
-
-
 
 Release History
 
@@ -27,8 +27,6 @@ Created by:
 
     Back End
         Cory Thomas
-
-    
 
 Dependencies
 
