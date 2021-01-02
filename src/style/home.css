@@ -104,7 +104,7 @@ video {
 }
 .paratitle {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   padding: 5% 0;
   color: green;
   background-color: #f3f1f2;
@@ -128,7 +128,7 @@ video {
 .home-right {
   padding-right: 2rem;
   font-family: "Raleway";
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   color: black;
   width: 50%;
   height: 100%;
@@ -150,7 +150,7 @@ video {
   padding: 3rem 4rem;
   margin-bottom: 2rem;
   font-family: "Raleway";
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: lightskyblue;
   background-color: #f3f1f2;
 }
