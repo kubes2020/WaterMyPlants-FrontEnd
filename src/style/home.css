@@ -100,7 +100,7 @@ video {
   font-weight: bolder;
   text-align: center;
   font-size: 7.6rem;
-  padding-top: 2rem;
+  padding-top: 2%;
 }
 .paratitle {
   text-align: center;
@@ -147,12 +147,21 @@ video {
 
 .closing-words {
   text-align: center;
-  padding: 3rem 4rem;
-  margin-bottom: 2rem;
+  padding: 3% 4%;
+  margin-bottom: 2%;
   font-family: "Raleway";
   font-size: 3.5rem;
   color: lightskyblue;
   background-color: #f3f1f2;
+}
+
+@media (min-width: 1400px) {
+  .paratitle {
+    padding: 15% 4% 10% 0;
+  }
+  .home-right {
+    padding-right: 4%;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -176,11 +185,11 @@ video {
   }
   .closing-words {
     font-size: 2rem;
-    padding: 3rem 10rem;
+    padding: 3% 10%;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .main-home-container {
     flex-direction: column;
   }
@@ -195,7 +204,7 @@ video {
     padding: 2% 2% 3% 2%;
   }
   .closing-words {
-    padding: 1rem 2rem;
-    margin-top: 2rem;
+    padding: 1% 2%;
+    margin-top: 2%;
   }
 }
