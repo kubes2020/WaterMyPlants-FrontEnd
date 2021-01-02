@@ -25,8 +25,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   padding: .4% 0;
   color: #F8E30C;
-  background: #81A99D;
-  
+  background: #81A99D; 
   min-width: 150px;
   margin: .2%;
   font-size: 1.2rem;
