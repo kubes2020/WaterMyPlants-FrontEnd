@@ -18,7 +18,7 @@ export const Home = () => {
 
             <div className="home-right">
                 <p className="paratitle">Just like humans, every plant is unique</p>
-                <p>Some plants require water daily, some weekly, and some every third day. How do you keep this schedule straight? This is where the Water My Plants App comes in. Our features allow you to add all of your plants to the app including plant species, nickname, pictures and watering frequency.</p> 
+                <p>Some plants require water daily, some weekly, and some every third day. How do you keep this schedule straight? This is where the Water My Plants App comes in. Our features allow you to add important details of your plants including species, nickname, pictures and watering frequency.</p> 
             </div>
 
         </div>

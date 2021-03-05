@@ -14,7 +14,7 @@ import styled from "styled-components";
 import './App.css';
 
 
-
+// styled components
 const MainNav = styled.nav`
   text-align: right;
   @media (max-width: 400px){
