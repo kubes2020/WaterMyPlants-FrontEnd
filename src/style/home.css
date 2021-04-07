@@ -159,13 +159,13 @@ video {
 }
 
 .get-started a{
+  background-color: rgb(182, 11, 234);
   text-decoration: none;
   font-size: 1.8rem;
   color: white;
   border-radius: 50%;
   padding: 7%;
   z-index: 2;
-  background-color: rgb(182, 11, 234);
 }
 
 .lower-home-container {
