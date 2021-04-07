@@ -20,11 +20,13 @@ export const Home = () => {
         </div>
 
         <div className="right-half">
-          <p className="get-started">
-            <Link to="/signup">
-              <b>Get Started</b>
-            </Link>
-          </p>
+          <div className="bottom-right-abs">
+            <p className="get-started">
+              <Link to="/signup">
+                <b>Get Started</b>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
       <div className="lower-home-container">

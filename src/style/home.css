@@ -94,17 +94,13 @@ video {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: bolder;
   text-align: center;
-  font-size: 3.6rem;
+  font-size: 3rem;
   /* padding-top: 2%; */
   /* border: 2px solid maroon; */
 }
 
 
-.app-description {
-  /* border: 2px solid blue; */
-  display: flex;
-  
-}
+
 
 .rain {
   color: green;
@@ -145,30 +141,43 @@ video {
 }
 
 .right-half {
+  position: relative;
   text-align: left;
-
-  padding: 42% 0 0 5%;
   z-index: 2;
   width: 50%;
   height: 100%;
   /* border: 2px dotted red; */
 }
 
+.bottom-right-abs {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+
+}
+
 .get-started a{
   text-decoration: none;
   font-size: 1.8rem;
   color: white;
-  /* border: 2px solid rgb(182, 11, 234); */
-  background-color: rgb(182, 11, 234);
-  border-radius: 49%;
-  padding: 5%;
+  border-radius: 50%;
+  padding: 7%;
   z-index: 2;
+  background-color: rgb(182, 11, 234);
 }
 
 .lower-home-container {
   font-size: 1.6rem;
   padding: 2% 4%;
   /* border: 2px solid blue; */
+}
+
+.app-description {
+  font-family: Raleway;
+  color: rgba(0,0,0,0.87)
+  
 }
 
 @media (max-width: 1300px) {
