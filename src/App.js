@@ -15,7 +15,7 @@ import "./App.css";
 //Styled Components
 const MainNav = styled.nav`
   text-align: right;
-  padding: 1.5% 0;
+  padding: 1% 0;
   /* border: 2px solid red; */
   @media (max-width: 400px) {
     text-align: center;
