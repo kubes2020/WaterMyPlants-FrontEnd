@@ -95,20 +95,17 @@ video {
   font-weight: bolder;
   text-align: center;
   font-size: 3rem;
-  /* padding-top: 2%; */
+  height: 10vh;
   /* border: 2px solid maroon; */
 }
 
 .rain {
-  color: green;
+  color: rgb(25, 132, 25);
 }
 
-.rain:hover {
-  color: lightskyblue;
-}
 .main-home-container {
   position: relative;
-  height: 80vh;
+  height: 60vh;
   width: 100vw;
   display: flex;
   /* border: 2px solid orange; */
@@ -122,7 +119,7 @@ video {
   width: 100%;
   object-fit: cover;
   overflow: hidden;
-  /* opacity: .7; */
+  opacity: .8;
 }
 
 .left-half {
@@ -156,24 +153,52 @@ video {
 
 .get-started a{
   background-color: rgb(182, 11, 234);
+  border: 1px solid rgb(182, 11, 234);
   text-decoration: none;
   font-size: 1.8rem;
   color: white;
-  border-radius: 50%;
-  padding: 7%;
+  border-radius: 12px;
+  padding: 5%;
   z-index: 2;
+}
+
+.get-started a:hover {
+  background-color: rgb(182, 11, 234, .3);
+  transition: all 0.4s ease-in-out;
 }
 
 .lower-home-container {
   font-size: 1.6rem;
-  padding: 5% 4%;
+  height: 25vh;
+  text-align: left;
+  padding: 3% 4%;
   /* border: 2px solid blue; */
 }
 
-.app-description {
+
+.bullet-point {
+  height: 70%;
+  font-size: 2.7rem;
   font-family: Raleway;
-  color: rgba(0,0,0,0.87)
-  
+  color: rgba(0,0,0,0.87);
+  /* border: 1px solid purple; */
+}
+.three-things-container {
+  display: flex;
+  height: 30%;
+  /* border: 1px solid red; */
+}
+
+.three-things {
+  font-size: 1.3rem;
+  width: 33.3%;
+  /* border: 2px solid yellow; */
+}
+
+.circle-num {
+  background-color: rgb(136, 205, 240);
+  padding: 3%;
+  border-radius: 100% ;
 }
 
 @media (max-width: 1300px) {

@@ -16,7 +16,6 @@ import "./App.css";
 const MainNav = styled.nav`
   text-align: right;
   padding: 1% 0;
-  /* border: 2px solid red; */
   @media (max-width: 400px) {
     text-align: center;
   }
@@ -25,18 +24,17 @@ const NavLink = styled(Link)`
   text-decoration: none;
   padding: 0.2% 1%;
   color: rgba(0, 0, 0, 0.87);
-  /* background: #f3f1f2; */
-  /* min-width: 150px; */
   margin: 0.2%;
   font-size: 1rem;
+  padding: 0.5%;
+  border-radius: 6px;
   justify-content: center;
-  /* border-radius: 5px; */
   display: inline-flex;
   font-family: Raleway;
   &:hover {
     color: white;
     background-color: darkgreen;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   @media (max-width: 400px) {
     font-size: 1rem;
@@ -74,7 +72,7 @@ function App() {
 
   return (
     <div className="App">
-      <MainNav>
+      <MainNav className="nav">
         <NavLink to="/">Home</NavLink>
         {loginLinks}
       </MainNav>

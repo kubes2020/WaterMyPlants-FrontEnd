@@ -6,3 +6,7 @@
   background-color: rgb(233, 240, 233);
 }
 
+.nav {
+  height: 5vh;
+  /* border: 2px solid teal;  */
+}

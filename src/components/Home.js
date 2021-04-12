@@ -30,9 +30,18 @@ export const Home = () => {
         </div>
       </div>
       <div className="lower-home-container">
-        <h2 className="app-description">
-          Keep track of - species name, nickname, watering frequency
-        </h2>
+        <h2 className="bullet-point">Keep track of</h2>
+        <div className="three-things-container">
+          <h2 className="three-things">
+            <span className="circle-num">1</span> Species Name
+          </h2>
+          <h2 className="three-things">
+            <span className="circle-num">2</span> Nickname
+          </h2>
+          <h2 className="three-things">
+            <span className="circle-num">3</span> Watering Frequency
+          </h2>
+        </div>
       </div>
     </>
   );
