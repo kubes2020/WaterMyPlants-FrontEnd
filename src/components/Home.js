@@ -43,6 +43,9 @@ export const Home = () => {
           </h2>
         </div>
       </div>
+      {/* <div className="examples-container">
+        <h2>test</h2>
+      </div> */}
     </>
   );
 };

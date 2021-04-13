@@ -164,7 +164,7 @@ video {
 
 .get-started a:hover {
   background-color: rgb(182, 11, 234, .3);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .lower-home-container {
@@ -199,6 +199,11 @@ video {
   background-color: rgb(136, 205, 240);
   padding: 3%;
   border-radius: 100% ;
+}
+
+.examples-container {
+  height: 100vh;
+  border: 2px solid green;
 }
 
 @media (max-width: 1300px) {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import * as yup from "yup";
 import { Link } from "react-router-dom";
@@ -76,67 +75,69 @@ export default function SignUp(props) {
       });
   };
   return (
-    <div className="ls-form1">
-      <form onSubmit={handleSubmit}>
-        <div className="form-header">
-          <h1>Sign-up</h1>
+    <div className="form-container">
+      <div className="ls-form1">
+        <form onSubmit={handleSubmit}>
+          <div className="form-header">
+            <h1>Sign-up</h1>
 
-          <h2>Happy Plants</h2>
+            <h2>Happy Plants</h2>
+            <br></br>
+          </div>
           <br></br>
-        </div>
-        <br></br>
-        <div className="ls-text">
-          <label htmlFor="username">
-            <b>Create a Username:</b>
-          </label>
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={values.username}
-            onChange={inputChange}
-          />
-        </div>
-        <div className="ls-text">
-          <label htmlFor="password">
-            <b>Create a Password:</b>
-          </label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={values.password}
-            onChange={inputChange}
-          />
-        </div>
+          <div className="ls-text">
+            <label htmlFor="username">
+              <b>Create a Username:</b>
+            </label>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={values.username}
+              onChange={inputChange}
+            />
+          </div>
+          <div className="ls-text">
+            <label htmlFor="password">
+              <b>Create a Password:</b>
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={values.password}
+              onChange={inputChange}
+            />
+          </div>
 
-        <br></br>
+          <br></br>
 
-        <div className="form-terms">
-          <p>
-            <b>
-              By selecting Agree and continue below, I agree to Water My Plants'
-              Terms and Conditions.
-            </b>
-          </p>
-        </div>
-        <br></br>
-        <div className="logBtn">
-          <button disabled={buttonDisabled} type="submit">
-            Agree and Continue
-          </button>
-          <br></br>{" "}
-        </div>
-        <br></br>
-        <div className="form-already">
-          <p className="text-link">
-            Already have an account?{" "}
-            <Link to="/Login">
-              <b>Log in</b>
-            </Link>
-          </p>
-        </div>
-      </form>
+          <div className="form-terms">
+            <p>
+              <b>
+                By selecting Agree and continue below, I agree to Water My
+                Plants' Terms and Conditions.
+              </b>
+            </p>
+          </div>
+          <br></br>
+          <div className="logBtn">
+            <button disabled={buttonDisabled} type="submit">
+              Agree and Continue
+            </button>
+            <br></br>{" "}
+          </div>
+          <br></br>
+          <div className="form-already">
+            <p className="text-link">
+              Already have an account?{" "}
+              <Link to="/Login">
+                <b>Log in</b>
+              </Link>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

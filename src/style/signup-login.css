@@ -1,31 +1,36 @@
-.ls-form form {
+.form-container {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ls-form {
   max-width: 500px;
   margin: 2rem auto;
   border: 2px solid #000000;
   padding: 2rem;
-
   background-image: url("../assets/waterPlant.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
   border-radius: 14%;
+  /* border: 2px solid red; */
 }
 
-.ls-form1 form {
+.ls-form1 {
   max-width: 500px;
   margin: 2rem auto;
   border: 2px solid #000000;
   padding: 2rem;
-
   background-image: url("../assets/closeUp.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
   border-radius: 14%;
+  /* border: 2px solid orange; */
 }
 
 .ls-forms form {
@@ -33,14 +38,13 @@
   margin: 2rem auto;
   border: 2px solid #000000;
   padding: 2rem;
-
   background-image: url("../assets/pic01.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
   border-radius: 14%;
+  /* border: 2px solid pink; */
 }
 
 @media (max-width: 350px) {
@@ -54,13 +58,11 @@
   margin: 2rem auto;
   border: 2px solid #000000;
   padding: 2rem;
-
   background-image: url("../assets/white.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
   border-radius: 14%;
 }
 
