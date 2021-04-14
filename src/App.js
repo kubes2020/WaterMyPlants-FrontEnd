@@ -33,7 +33,7 @@ const NavLink = styled(Link)`
   font-family: Raleway;
   &:hover {
     color: white;
-    background-color: darkgreen;
+    background-color: rgb(25, 132, 25);
     transition: all 0.4s ease-in-out;
   }
   @media (max-width: 400px) {
