@@ -281,7 +281,7 @@ video {
 }
 
 .sample-talk {
-  margin-top: 3%;
+  margin: 3%;
   padding: 2%;
   background-color: rgb(208, 211, 210);
   color: white;
@@ -367,9 +367,6 @@ video {
   }
   .lg-card-container {
     width: 80%;
-  }
-  .lower-home-container {
-    height: 20vh;
   }
   .main-home-container {
     height: 85vh;
