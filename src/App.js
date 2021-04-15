@@ -14,9 +14,9 @@ import "./App.css";
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  padding: 0.3% 2% 0 0.3%;
+  padding: 0.3%;
   color: rgba(0, 0, 0, 0.87);
-  margin: 0.2%;
+  margin: 0.3% 2%;
   font-size: 1rem;
   border-radius: 6px;
   justify-content: center;

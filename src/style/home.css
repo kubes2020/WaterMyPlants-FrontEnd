@@ -214,19 +214,21 @@ video {
 }
 
 .examples-container {
-  padding: 8% 15% 0 15%;
+  padding: 8% 0 0 0;
   display: flex;
   justify-content: space-around;
   min-height: 600px;
-  /* border: 2px solid green; */
+  width: 80%;
+  border: 2px solid green;
 }
 
 .lg-card-container {
-  width: 25%;
-  height: 100%;
+  width: 200px;
+  height: 375px;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
+  border: 2px solid red;
 }
 
 .sample {
@@ -292,7 +294,8 @@ video {
     height: 700px;
   }
   .examples-container {
-    padding: 8% 10% 0 10%;
+    padding: 8% 0 0 0;
+    width: 95%;
     min-height: 500px;
   }
 }
