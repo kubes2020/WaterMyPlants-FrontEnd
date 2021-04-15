@@ -219,7 +219,7 @@ video {
   justify-content: space-around;
   min-height: 600px;
   width: 80%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .lg-card-container {
@@ -228,7 +228,7 @@ video {
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .sample {
