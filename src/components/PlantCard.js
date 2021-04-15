@@ -127,7 +127,7 @@ export default function PlantCard(props) {
           <MainCardContainer className="plant-card" key={plant.id}>
             <h4>Nickname: {plant.nickname}</h4>
             <h4>Species: {plant.species}</h4>
-            <h4>Water Per Week: {plant.h2o_frequency} time(s)</h4>
+            <h4>Water Per Month: {plant.h2o_frequency} time(s)</h4>
             <CardImageDiv className="plant-card-img">
               <Image src={plant.image_url} alt={plant.nickname}></Image>
             </CardImageDiv>

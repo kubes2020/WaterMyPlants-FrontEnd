@@ -12,21 +12,12 @@ import Settings from "./components/Settings";
 import styled from "styled-components";
 import "./App.css";
 
-//Styled Components
-const MainNav = styled.nav`
-  text-align: right;
-  padding: 1% 0;
-  @media (max-width: 400px) {
-    text-align: center;
-  }
-`;
 const NavLink = styled(Link)`
   text-decoration: none;
-  padding: 0.2% 1%;
+  padding: 0.3% 2% 0 0.3%;
   color: rgba(0, 0, 0, 0.87);
   margin: 0.2%;
   font-size: 1rem;
-  padding: 0.5%;
   border-radius: 6px;
   justify-content: center;
   display: inline-flex;
@@ -72,10 +63,10 @@ function App() {
 
   return (
     <div className="App">
-      <MainNav className="nav">
+      <div className="main-nav">
         <NavLink to="/">Home</NavLink>
         {loginLinks}
-      </MainNav>
+      </div>
       <PlantContext.Provider value={{ plantId, setPlantId }}>
         <Route exact path="/" component={Home}></Route>
         <Route

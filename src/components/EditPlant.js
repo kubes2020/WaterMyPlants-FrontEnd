@@ -64,23 +64,6 @@ export default function EditPlant(props) {
     image_url: "",
   });
 
-  // useEffect(() => {
-  //   let mounted = true;
-  //   axiosWithAuth()
-  //     .get(`/plants/${plantId}`)
-  //     .then((res) => {
-  //       console.log("res from editPlants", res.data);
-  //       if (mounted) {
-  //         setValues(res.data);
-  //       }
-  //     });
-  //   return function cleanup() {
-  //     mounted = false;
-  //   }.catch((err) => {
-  //     console.log("error with editPlants", err);
-  //   });
-  // }, []);
-
   useEffect(() => {
     let mounted = true;
     axiosWithAuth()
@@ -218,7 +201,7 @@ export default function EditPlant(props) {
             </div>
             <div className="ls-text">
               <label htmlFor="h2o_frequency">
-                Plant's water frequency?
+                Water Per Month?
                 <input
                   className="inputcolor"
                   type="number"
@@ -231,7 +214,7 @@ export default function EditPlant(props) {
             </div>
             <div className="ls-text">
               <label htmlFor="image_url">
-                Optional
+                Optional Image Address
                 <input
                   className="inputcolor"
                   type="text"
