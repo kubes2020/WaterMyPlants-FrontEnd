@@ -64,6 +64,23 @@ export default function EditPlant(props) {
     image_url: "",
   });
 
+  // useEffect(() => {
+  //   let mounted = true;
+  //   axiosWithAuth()
+  //     .get(`/plants/${plantId}`)
+  //     .then((res) => {
+  //       console.log("res from editPlants", res.data);
+  //       if (mounted) {
+  //         setValues(res.data);
+  //       }
+  //     });
+  //   return function cleanup() {
+  //     mounted = false;
+  //   }.catch((err) => {
+  //     console.log("error with editPlants", err);
+  //   });
+  // }, []);
+
   useEffect(() => {
     let mounted = true;
     axiosWithAuth()
@@ -73,12 +90,13 @@ export default function EditPlant(props) {
         if (mounted) {
           setValues(res.data);
         }
+      })
+      .catch((err) => {
+        console.log("error with editPlants", err);
       });
     return function cleanup() {
       mounted = false;
-    }.catch((err) => {
-      console.log("error with editPlants", err);
-    });
+    };
   }, []);
 
   const formSchema = yup.object().shape({
@@ -165,6 +183,7 @@ export default function EditPlant(props) {
 
   return (
     <>
+      <h1>testing editplant</h1>
       <MainCardContainer>
         <CardImageDiv>
           <Image src={`${values.image_url}`} alt=""></Image>
