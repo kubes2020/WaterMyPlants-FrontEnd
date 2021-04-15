@@ -177,7 +177,7 @@ video {
 
 
 .bullet-point {
-  height: 70%;
+  height: 50%;
   font-size: 2.7rem;
   font-family: Raleway;
   color: rgba(0,0,0,0.87);
@@ -214,17 +214,17 @@ video {
 }
 
 .examples-container {
-  padding: 8% 0 0 0;
+  padding: 6% 0 0 0;
   display: flex;
   justify-content: space-around;
-  min-height: 600px;
+  min-height: 500px;
   width: 80%;
   /* border: 2px solid green; */
 }
 
 .lg-card-container {
-  width: 200px;
-  height: 375px;
+  width: 250px;
+  height: 425px;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -281,7 +281,7 @@ video {
 }
 
 .sample-talk {
-  margin-top: 6%;
+  margin-top: 3%;
   padding: 2%;
   background-color: rgb(208, 211, 210);
   color: white;
@@ -294,9 +294,16 @@ video {
     height: 700px;
   }
   .examples-container {
-    padding: 8% 0 0 0;
+    padding: 6% 0 0 0;
     width: 95%;
     min-height: 500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .lg-card-container {
+    width: 200px;
+    height: 420px;
   }
 }
 
@@ -325,7 +332,8 @@ video {
     height: 1600px;
   }
   .lg-card-container {
-    width: 55%;
+    width: 50%;
+    height: 520px;
   }
 }
 
@@ -361,7 +369,7 @@ video {
     width: 80%;
   }
   .lower-home-container {
-    height: 200px;
+    height: 20vh;
   }
   .main-home-container {
     height: 85vh;
