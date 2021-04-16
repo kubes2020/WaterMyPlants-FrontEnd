@@ -93,7 +93,8 @@ export const Home = () => {
           </div>
         </div>
         <div className="sample-talk">
-          <h5>Stay healthy, stay hydrated just like your plants</h5>
+          <h5>Keep your plants healthy and hydrated</h5>
+          <h5>Sign up now</h5>
         </div>
       </div>
     </>
