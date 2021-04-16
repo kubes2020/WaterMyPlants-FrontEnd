@@ -318,7 +318,7 @@ video {
     width: 100%;
   }
   .lower-home-container {
-    height: 25vh;
+    height: 28vh;
   }
   .sample-talk {
     font-size: 1.4rem;
@@ -333,7 +333,7 @@ video {
   }
   .lg-card-container {
     width: 50%;
-    height: 520px;
+    height: 500px;
   }
 }
 
