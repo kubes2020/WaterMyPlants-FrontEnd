@@ -374,7 +374,7 @@ video {
   }
   .image-container {
     max-width: 90%;
-    max-height: 55%;
+    max-height: 230px;
   }
 }
 
