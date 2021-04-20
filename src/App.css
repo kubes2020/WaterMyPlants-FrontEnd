@@ -7,13 +7,7 @@
 }
 
 .main-nav {
-  height: 5vh;
+  height: 40px;
   text-align: right;
-  /* border: 2px solid teal; */
 }
 
-/* @media (max-width: 400px) {
-  .main-nav {
-    text-align: center;
-  }
-} */

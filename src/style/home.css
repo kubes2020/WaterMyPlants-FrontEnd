@@ -95,8 +95,7 @@ video {
   font-weight: bolder;
   text-align: center;
   font-size: 3rem;
-  height: 10vh;
-  /* border: 2px solid maroon; */
+  height: 80px;
 }
 
 .rain {
@@ -105,10 +104,9 @@ video {
 
 .main-home-container {
   position: relative;
-  height: 60vh;
+  height: 500px;
   width: 100vw;
   display: flex;
-  /* border: 2px solid orange; */
 }
 
 .home-image img{
@@ -131,7 +129,6 @@ video {
   width: 50%;
   height: 100%;
   z-index: 2;
-  /* border: 2px solid orange; */
 }
 
 .right-half {
@@ -140,7 +137,6 @@ video {
   z-index: 2;
   width: 50%;
   height: 100%;
-  /* border: 2px dotted red; */
 }
 
 .bottom-right-abs {
@@ -169,10 +165,9 @@ video {
 
 .lower-home-container {
   font-size: 1.6rem;
-  height: 25vh;
+  height: 210px;
   text-align: left;
   padding: 3% 4%;
-  /* border: 2px solid blue; */
 }
 
 
@@ -181,19 +176,16 @@ video {
   font-size: 2.7rem;
   font-family: Raleway;
   color: rgba(0,0,0,0.87);
-  /* border: 1px solid purple; */
 }
 .three-things-container {
   display: flex;
   height: 30%;
-  /* border: 1px solid red; */
 }
 
 .three-things {
   font-size: 1.3rem;
   padding: 2% 0;
   width: 33.3%;
-  /* border: 2px solid yellow; */
 }
 
 .circle-num {
@@ -204,7 +196,6 @@ video {
 
 .examples-main-container {
   height: 820px;
-  /* height: 80%; */
   padding-bottom: 3%;
   display: flex;
   flex-direction: column;
@@ -219,7 +210,6 @@ video {
   justify-content: space-around;
   min-height: 500px;
   width: 80%;
-  /* border: 2px solid green; */
 }
 
 .lg-card-container {
@@ -228,7 +218,6 @@ video {
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
 }
 
 .sample {
@@ -248,14 +237,12 @@ video {
   font-size: 1rem;
   box-shadow: 1px 1px 4px;
   background: white;
-  /* border: 2px solid yellow; */
 }
 
 .card-text {
   width: 90%;
   background-color: rgb(233, 240, 233);
   border-radius: 7px;
-  /* border: 1px solid green; */
 }
 
 .image-container {
@@ -263,7 +250,6 @@ video {
   max-width: 90%;
   max-height: 60%;
   overflow: hidden;
-  /* border: 2px solid purple; */
 }
 
 .image-container img {
@@ -366,9 +352,6 @@ video {
   }
   .lg-card-container {
     width: 80%;
-  }
-  .main-home-container {
-    height: 85vh;
   }
   .homeheader {
     font-size: 2.3rem;
