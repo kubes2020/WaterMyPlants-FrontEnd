@@ -1,5 +1,5 @@
 .form-container {
-  height: 95vh;
+  height: 97vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +169,6 @@ textarea {
 
 @media (max-width: 600px) {
   .form-container {
-    height: 790px;
     align-items:flex-start;
   }
   .ls-form1 {
