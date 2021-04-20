@@ -99,9 +99,8 @@
 .ls-text label {
   font-family: Raleway;
   display: block;
-  /* color: #f8df47; */
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-shadow: 1px 1px black; 
   -webkit-text-stroke: 1px rgb(25, 132, 25);
 }

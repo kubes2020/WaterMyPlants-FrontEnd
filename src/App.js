@@ -28,7 +28,7 @@ const NavLink = styled(Link)`
     transition: all 0.4s ease-in-out;
   }
   @media (max-width: 550px) {
-    font-size: 1rem;
+    font-size: 2rem;
     display: block;
   }
 `;

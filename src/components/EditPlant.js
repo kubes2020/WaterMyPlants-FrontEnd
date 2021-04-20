@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 //styled components
 const MainCardContainer = styled.div`
-  width: 60%;
+  width: 70%;
   height: 50%;
   text-align: center;
   margin: 2% auto;
