@@ -18,7 +18,8 @@ const MainCardContainer = styled.div`
   padding: 0.5% 0 2% 0;
   border-radius: 10px;
   font-size: 2.7rem;
-  background: white;
+  background-color: rgb(233, 240, 233);
+  box-shadow: 1px 1px 4px;
   @media (max-width: 400px) {
     font-size: 1.2rem;
   }
@@ -35,9 +36,19 @@ const Image = styled.img`
   box-shadow: 2px 2px 2px black;
 `;
 const DivText = styled.div`
-  font-size: 2rem;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  padding: 2% 1%;
+  font-size: 1.7rem;
+  font-family: Raleway;
+  padding: 4% 1%;
+  color: rgb(0, 0, 0, 0.9);
+  /* background-color: #ce8043; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(29, 120, 244, 0.938813025210084) 0%,
+    rgba(136, 205, 240, 1) 45%
+  );
+  text-shadow: 1px 1px 1px;
 `;
 const Button = styled.button`
   font-size: 1.5rem;

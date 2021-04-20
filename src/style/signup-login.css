@@ -45,7 +45,7 @@
   margin: 2rem auto;
   border: 2px solid #000000;
   padding: 2rem;
-  background-image: url("../assets/pic01.jpg");
+  background-image: url("../assets/sky.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -99,10 +99,11 @@
 .ls-text label {
   font-family: Raleway;
   display: block;
-  color: #f8df47;
+  /* color: #f8df47; */
+  color: white;
   font-size: 1.5rem;
-  text-shadow: 2px 2px black;
-  -webkit-text-stroke: 1px #f8df47;
+  text-shadow: 1px 1px black; 
+  -webkit-text-stroke: 1px rgb(25, 132, 25);
 }
 
 .ls-text input,

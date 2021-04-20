@@ -11,10 +11,11 @@ const MainCardContainer = styled.div`
   text-align: center;
   margin: 2% auto;
   font-family: Raleway;
-  padding: 2% 0;
+  padding: 4%;
+  box-shadow: 1px 1px 4px;
   border-radius: 10px;
   font-size: 3rem;
-  background: white;
+  background-color: rgb(233, 240, 233);
 `;
 const CardImageDiv = styled.div`
   margin: 0 auto;

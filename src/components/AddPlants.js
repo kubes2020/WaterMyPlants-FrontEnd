@@ -31,13 +31,14 @@ const AddButton = styled.button`
   font-family: Raleway;
   color: white;
   border-radius: 10px;
-  background: #95dc12;
+  background: rgb(25, 132, 25);
   border: none;
+  box-shadow: 1px 1px 3px;
   margin-top: 15px;
   padding: 8px 12px;
   &:hover {
     background: yellow;
-    color: green;
+    color: rgb(25, 132, 25);
   }
 `;
 
@@ -150,7 +151,7 @@ export default function AddPlants(props) {
             </div>
             <div className="ls-text">
               <label htmlFor="h2o_frequency">
-                Water frequency per week?
+                Water frequency per month?
                 <input
                   className="inputcolor"
                   type="number"

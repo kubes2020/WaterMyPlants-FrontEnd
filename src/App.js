@@ -14,8 +14,8 @@ import "./App.css";
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  padding: 0.3%;
-  color: rgba(0, 0, 0, 0.87);
+  /* padding: 0.3%; */
+  color: rgba(0, 0, 0, 0.9);
   margin: 0.3% 2%;
   font-size: 1rem;
   border-radius: 6px;
@@ -27,9 +27,9 @@ const NavLink = styled(Link)`
     background-color: rgb(25, 132, 25);
     transition: all 0.4s ease-in-out;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 550px) {
     font-size: 1rem;
-    flex-direction: column;
+    display: block;
   }
 `;
 

@@ -104,7 +104,7 @@ video {
 
 .main-home-container {
   position: relative;
-  height: 800px;
+  height: 400px;
   width: 100vw;
   display: flex;
 }
@@ -165,9 +165,10 @@ video {
 
 .lower-home-container {
   font-size: 1.6rem;
-  height: 210px;
+  height: 190px;
   text-align: left;
   padding: 3% 4%;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -175,7 +176,7 @@ video {
   height: 50%;
   font-size: 2.7rem;
   font-family: Raleway;
-  color: rgba(0,0,0,0.87);
+  color: rgba(0,0,0,0.9);
 }
 .three-things-container {
   display: flex;

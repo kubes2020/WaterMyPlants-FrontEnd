@@ -3,11 +3,18 @@
 .App {
   margin: 0;
   text-align: center;
-  background-color: rgb(233, 240, 233);
+  background-color: white;
 }
 
 .main-nav {
-  height: 40px;
+  padding: .9%;
   text-align: right;
+}
+
+@media (max-width: 550px) {
+  .main-nav {
+    text-align: center;
+    display: inline-block;
+  }
 }
 
