@@ -86,11 +86,8 @@ export default function Login(props) {
         <form onSubmit={handleSubmit}>
           <div className="form-header">
             <h1>Login</h1>
-            <h2>Lets water</h2>
           </div>
-
           <br></br>
-
           <div className="ls-text">
             <label htmlFor="name">
               <b>Username: </b>
@@ -103,9 +100,7 @@ export default function Login(props) {
               placeholder="Enter your Username"
             />
           </div>
-
           <br></br>
-
           <div className="ls-text">
             <label htmlFor="password">
               <b>Password: </b>
@@ -118,15 +113,11 @@ export default function Login(props) {
               placeholder="Enter your Password"
             />
           </div>
-
           <br></br>
-
           <div className="logBtn">
             <button disabled={buttonDisabled}>Login</button>
           </div>
-
           <br></br>
-
           <div className="form-already">
             <p className="text-link">
               Not a member yet?{" "}

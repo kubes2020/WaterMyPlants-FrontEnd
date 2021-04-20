@@ -79,10 +79,7 @@ export default function SignUp(props) {
       <div className="ls-form1">
         <form onSubmit={handleSubmit}>
           <div className="form-header">
-            <h1>Sign-up</h1>
-
-            <h2>Happy Plants</h2>
-            <br></br>
+            <h3>Sign-up</h3>
           </div>
           <br></br>
           <div className="ls-text">
@@ -109,15 +106,11 @@ export default function SignUp(props) {
               onChange={inputChange}
             />
           </div>
-
           <br></br>
-
           <div className="form-terms">
             <p>
-              <b>
-                By selecting Agree and continue below, I agree to Water My
-                Plants' Terms and Conditions.
-              </b>
+              By selecting Agree and continue below, I agree to Water My Plants'
+              Terms and Conditions.
             </p>
           </div>
           <br></br>

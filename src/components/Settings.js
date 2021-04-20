@@ -77,10 +77,10 @@ export default function Settings(props) {
   return (
     <>
       <div className="form-container">
-        <div className="ls-formes">
+        <div className="ls-settings">
           <form onSubmit={handleSubmit}>
-            <div className="form-header">
-              <h2>Change Account Settings</h2>
+            <div className="form-header-settings">
+              <h3>Change Account Settings</h3>
               <br></br>
             </div>
             <div className="ls-text">

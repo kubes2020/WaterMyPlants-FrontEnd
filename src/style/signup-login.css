@@ -1,10 +1,17 @@
 .form-container {
-  /* height: 95vh; */
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* Add Plant */
+.form-container-col {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
 
+/* Login Form */
 .ls-form {
   max-width: 500px;
   margin: 2rem auto;
@@ -16,9 +23,9 @@
   background-attachment: fixed;
   background-size: cover;
   border-radius: 14%;
-  /* border: 2px solid red; */
 }
 
+/* Sign-Up Form */
 .ls-form1 {
   max-width: 500px;
   margin: 2rem auto;
@@ -30,9 +37,9 @@
   background-attachment: fixed;
   background-size: cover;
   border-radius: 14%;
-  /* border: 2px solid orange; */
 }
 
+/* Edit Plant Form and Add Plant Form */
 .ls-forms form {
   max-width: 500px;
   margin: 2rem auto;
@@ -44,16 +51,10 @@
   background-attachment: fixed;
   background-size: cover;
   border-radius: 14%;
-  /* border: 2px solid pink; */
 }
 
-@media (max-width: 350px) {
-  .ls-forms form input {
-    font-size: 0.5rem;
-  }
-}
-
-.ls-formes form {
+/* User Settings Form */
+.ls-settings form {
   max-width: 500px;
   margin: 2rem auto;
   border: 2px solid #000000;
@@ -100,7 +101,6 @@
   display: block;
   color: #f8df47;
   font-size: 1.5rem;
-
   text-shadow: 2px 2px black;
   -webkit-text-stroke: 1px #f8df47;
 }
@@ -113,15 +113,16 @@ textarea {
 .inputcolor {
   -webkit-text-stroke: 0.5px black;
 }
-
-.form-header h1 {
+/* Login and Sign-Up */
+.form-header {
   color: #f8df47;
   font-size: 6rem;
   text-shadow: 4px 4px black;
   font-family: Raleway;
 }
 
-.form-header h2 {
+/* User Settings */
+.form-header-settings {
   color: #f8df47;
   font-size: 2.5rem;
   text-shadow: 4px 5px black;
@@ -164,4 +165,23 @@ textarea {
   color: white;
   background-color: darkgreen;
   transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    height: 790px;
+    align-items:flex-start;
+  }
+  .ls-form1 {
+    max-width: 400px;
+  }
+  .form-header {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .ls-forms form input {
+    font-size: 0.5rem;
+  }
 }

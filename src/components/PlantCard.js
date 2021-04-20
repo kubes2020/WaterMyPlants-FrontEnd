@@ -6,7 +6,7 @@ import { PlantContext } from "./contexts/PlantContext";
 
 //styled components
 const MainContainer = styled.div`
-  height: 95vh;
+  padding-bottom: 20px;
 `;
 
 const MainCardContainer = styled.div`

@@ -166,7 +166,6 @@ export default function EditPlant(props) {
 
   return (
     <>
-      <h1>testing editplant</h1>
       <MainCardContainer>
         <CardImageDiv>
           <Image src={`${values.image_url}`} alt=""></Image>
