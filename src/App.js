@@ -11,10 +11,11 @@ import { PlantContext } from "./components/contexts/PlantContext";
 import Settings from "./components/Settings";
 import styled from "styled-components";
 import "./App.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GrClose } from "react-icons/gr";
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  /* padding: 0.3%; */
   color: rgba(0, 0, 0, 0.9);
   margin: 0.3% 2%;
   font-size: 1rem;
@@ -28,20 +29,31 @@ const NavLink = styled(Link)`
     transition: all 0.4s ease-in-out;
   }
   @media (max-width: 550px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: block;
   }
 `;
 
 function App() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const history = useHistory();
   const [plantId, setPlantId] = useState();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogOut = () => {
+    setNavbarOpen(false);
     localStorage.clear();
     setIsLoggedIn(false);
     history.push("/");
+  };
+
+  const handleToggle = (e) => {
+    e.preventDefault();
+    setNavbarOpen(!navbarOpen);
+  };
+
+  const closeMenu = (e) => {
+    setNavbarOpen(false);
   };
 
   let loginLinks;
@@ -49,22 +61,43 @@ function App() {
   if (isLoggedIn) {
     loginLinks = (
       <span>
-        <NavLink to="/settings">User Settings</NavLink>
-        <NavLink to="/plantcard">View My Plants</NavLink>
-        <NavLink to="/addplants">Add Plants</NavLink>
+        <NavLink to="/settings" onClick={closeMenu}>
+          User Settings
+        </NavLink>
+        <NavLink to="/plantcard" onClick={closeMenu}>
+          View My Plants
+        </NavLink>
+        <NavLink to="/addplants" onClick={closeMenu}>
+          Add Plants
+        </NavLink>
         <NavLink to="/" onClick={handleLogOut}>
           Logout
         </NavLink>
       </span>
     );
   } else {
-    loginLinks = <NavLink to="/login">Login</NavLink>;
+    loginLinks = (
+      <NavLink to="/login" onClick={closeMenu}>
+        Login
+      </NavLink>
+    );
   }
 
   return (
     <div className="App">
-      <div className="main-nav">
-        <NavLink to="/">Home</NavLink>
+      <div className="menu-button">
+        <button onClick={handleToggle}>
+          {navbarOpen ? (
+            <GrClose size="2rem" />
+          ) : (
+            <GiHamburgerMenu size="2rem" />
+          )}
+        </button>
+      </div>
+      <div className={`main-nav ${navbarOpen ? " showMenu" : ""}`}>
+        <NavLink to="/" onClick={closeMenu}>
+          Home
+        </NavLink>
         {loginLinks}
       </div>
       <PlantContext.Provider value={{ plantId, setPlantId }}>

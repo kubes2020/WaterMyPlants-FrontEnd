@@ -40,7 +40,6 @@ const DivText = styled.div`
   font-family: Raleway;
   padding: 4% 1%;
   color: rgb(0, 0, 0, 0.9);
-  /* background-color: #ce8043; */
   background: rgb(2, 0, 36);
   background: linear-gradient(
     0deg,

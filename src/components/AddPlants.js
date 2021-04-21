@@ -31,7 +31,7 @@ const AddButton = styled.button`
   font-family: Raleway;
   color: white;
   border-radius: 10px;
-  background: rgb(25, 132, 25);
+  background-color: rgb(25, 132, 25);
   border: none;
   box-shadow: 1px 1px 3px;
   margin-top: 15px;
