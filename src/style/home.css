@@ -164,11 +164,16 @@ video {
   transition: all 0.3s ease-in-out;
 }
 
+#bot-home-link a{
+  padding: 0 1%;
+  font-size: 1.9rem;
+}
+
 .lower-home-container {
   font-size: 1.6rem;
   height: 190px;
   text-align: left;
-  padding: 3% 4%;
+  padding: 3% 10%;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -295,6 +300,9 @@ video {
     width: 200px;
     height: 420px;
   }
+  .lower-home-container {
+    padding: 3% 4%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -312,6 +320,9 @@ video {
   }
   .sample-talk {
     font-size: 1.4rem;
+  }
+  #bot-home-link a{
+    font-size: 1.3rem;
   }
   .examples-container {
     flex-direction: column;
@@ -360,6 +371,9 @@ video {
   }
   .sample-talk {
     font-size: 1rem;
+  }
+  #bot-home-link a{
+    font-size: .9rem;
   }
 }
 

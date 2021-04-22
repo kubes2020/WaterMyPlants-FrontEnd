@@ -17,11 +17,16 @@ const MainCardContainer = styled.div`
   font-family: Raleway;
   padding: 0.5% 0 2% 0;
   border-radius: 10px;
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   background-color: rgb(233, 240, 233);
   box-shadow: 1px 1px 4px;
+  @media (max-width: 550px) {
+    font-size: 2rem;
+    width: 80%;
+  }
   @media (max-width: 400px) {
     font-size: 1.2rem;
+    width: 90%;
   }
 `;
 const CardImageDiv = styled.div`

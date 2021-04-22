@@ -94,7 +94,9 @@ export const Home = () => {
         </div>
         <div className="sample-talk">
           <h5>Keep your plants healthy and hydrated</h5>
-          <h5>Sign up now</h5>
+          <h5 className="get-started" id="bot-home-link">
+            Sign up <Link to="/signup">now</Link>
+          </h5>
         </div>
       </div>
     </>

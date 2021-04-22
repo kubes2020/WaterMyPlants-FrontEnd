@@ -16,6 +16,12 @@ const MainCardContainer = styled.div`
   border-radius: 10px;
   font-size: 3rem;
   background-color: rgb(233, 240, 233);
+  @media (max-width: 550px) {
+    width: 80%;
+  }
+  @media (max-width: 400px) {
+    width: 90%;
+  }
 `;
 const CardImageDiv = styled.div`
   margin: 0 auto;
@@ -35,11 +41,16 @@ const DivText = styled.div`
 `;
 const Button = styled.button`
   font-size: 1.5rem;
-  color: #be1f1f;
+  color: white;
   border: none;
   border-radius: 10px;
-  background: lightgrey;
+  background: #be1f1f;
   margin-left: 5px;
+  &:hover {
+    background: white;
+    color: #be1f1f;
+    transition: all 0.4s ease-in-out;
+  }
 `;
 const SubmitButton = styled.button`
   font-size: 1.5rem;
@@ -47,6 +58,11 @@ const SubmitButton = styled.button`
   border-radius: 10px;
   background: #81a99d;
   border: none;
+  &:hover {
+    background: white;
+    color: #81a99d;
+    transition: all 0.4s ease-in-out;
+  }
 `;
 
 export default function EditPlant(props) {
